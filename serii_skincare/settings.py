@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -59,13 +63,37 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',  # required by allauth. Dont delete.
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+
+# To temporarily log confirmation emails to the console to get the links
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # Allow auth via username OR email
+ACCOUNT_EMAIL_REQUIRED = True  # User must use email to register
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # User must verify email
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # User must enter email twice to register
+ACCOUNT_USERNAME_MIN_LENGTH = 4  # Username must be 4 chars or more
+LOGIN_URL = '/accounts/login/'  # Specifying login url
+LOGIN_REDIRECT_URL = '/success'  # Redirect url after logging in
 
 WSGI_APPLICATION = 'serii_skincare.wsgi.application'
 
