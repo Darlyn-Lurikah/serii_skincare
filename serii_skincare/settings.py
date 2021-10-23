@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home', # Adding home app to project app
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,11 @@ ROOT_URLCONF = 'serii_skincare.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),  # Root template dir in same line as project dir
+            os.path.join(BASE_DIR, 'templates', 'allauth'),  # Allauth templates - kept in templates/allauth
+        ],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
