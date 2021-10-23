@@ -93,7 +93,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # User must verify email
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # User must enter email twice to register
 ACCOUNT_USERNAME_MIN_LENGTH = 4  # Username must be 4 chars or more
 LOGIN_URL = '/accounts/login/'  # Specifying login url
-LOGIN_REDIRECT_URL = '/success'  # Redirect url after logging in
+LOGIN_REDIRECT_URL = '/'  # Redirect url after logging in
 
 WSGI_APPLICATION = 'serii_skincare.wsgi.application'
 
