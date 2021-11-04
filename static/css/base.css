@@ -3,11 +3,17 @@ html {
 }
 
 body {
-    background: url('/media/home_callout.jpg') no-repeat center fixed;
-    background-size: cover;
-    background-color: #f3d6d3;
+    
     height: calc(100vh - 165px);
+    background-color: #f3d6d3;
+    
 }
+
+.jumbotron-fluid {
+    background: url('/media/home_callout.jpg') no-repeat center fixed;
+    background-size: contain;
+}
+
 
 /* Site background colour*/
 .bg-color {
