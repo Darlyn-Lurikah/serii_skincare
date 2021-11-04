@@ -39,7 +39,7 @@
   <body>
     
     <header class="container-fluid fixed-top">
-      <div class="row">
+      <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font text-black my-0">Serii</h2>
@@ -73,7 +73,7 @@
                       </div>
                   </a>
 
-                  <!--Dropdown links -->
+                  <!--Dropdown account link-->
                   <div class="dropdown-menu border-0" aria-labelledby="user-options">
                       {% if request.user.is_authenticated %}
 
@@ -91,10 +91,14 @@
                       {% endif %}
                   </div>
               </li>
+
+              <!--Basket link-->
               <li class="list-inline-item">
+                <!--If grand total exists, make text styling bold-->
                   <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                       <div class="text-center">
                           <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                          <!--Displays basket total if present to two decimal places-->
                           <p class="my-0">
                               {% if grand_total %}
                                   ${{ grand_total|floatformat:2 }}
