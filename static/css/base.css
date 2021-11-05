@@ -24,6 +24,13 @@ body {
     letter-spacing: 0.2rem;
 }
 
+@supports (-webkit-text-stroke: 2px #0322AD) {
+    .logo-font {
+      -webkit-text-stroke: 2px #0322AD;
+      -webkit-text-fill-color: #0322AD;
+    }
+  }
+
 
 .brand-title-font {
     font-family: 'STIX Two Text', serif;
