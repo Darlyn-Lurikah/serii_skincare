@@ -6,6 +6,7 @@ body {
     
     height: calc(100vh - 165px);
     background-color: #f3d6d3;
+    font-family: 'Mukta Malar', sans-serif;
     
 }
 
@@ -15,6 +16,20 @@ body {
     height: 100vh;
 }
 
+
+.logo-font {
+    font-family: 'STIX Two Text', serif;
+    font-weight: 700;
+    color: #0322AD;
+    letter-spacing: 0.2rem;
+}
+
+
+.brand-title-font {
+    font-family: 'STIX Two Text', serif;
+    font-weight: 600;
+    color: #0322AD;
+}
 
 /* Site background colour*/
 .bg-color {
