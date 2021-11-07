@@ -79,7 +79,16 @@ body {
 
 
 /*SEARCH BAR*/
+.search-bar-style {
+    border: 3px solid #0322AD;
+    border-radius: 1rem;
+}
 
+.search-icon-border {
+    border-radius: 1rem 1rem;
+    border: 3px solid #0322AD;
+    border-left: none;
+}
 
 .header-container {
     padding-top: 164px;
