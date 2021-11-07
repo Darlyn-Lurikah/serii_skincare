@@ -56,7 +56,7 @@
               <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search Serri">
               <div class="input-group-append">
                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                  <span class="icon">
+                  <span class="icon brand-icon">
                     <i class="fas fa-search"></i>
                   </span>
                 </button>
@@ -71,7 +71,7 @@
               <li class="list-inline-item dropdown">
                   <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="text-center">
-                          <div><i class="fas fa-user fa-lg"></i></div>
+                          <div class="brand-icon"><i class="fas fa-user fa-lg"></i></div>
                           <p class="my-0">My Account</p>
                       </div>
                   </a>
@@ -100,7 +100,7 @@
                 <!--If grand total exists, make text styling bold-->
                   <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                       <div class="text-center">
-                          <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                          <div class="brand-icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
                           <!--Displays basket total if present to two decimal places-->
                           <p class="my-0">
                               {% if grand_total %}
