@@ -152,6 +152,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Supposed to add STATIC ROOT too but will interfere with
+# setting up AWS
 # Tells django where static files located (in tuple format)
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 

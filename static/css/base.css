@@ -18,7 +18,7 @@ body {
 }
 
 
-/*****FONTS STYLING*****/
+/*****LOGO & FONTS STYLING*****/
 .logo-font {
     font-family: 'STIX Two Text', serif;
     font-weight: 700;
@@ -40,6 +40,9 @@ body {
     color: #0322AD;
 }
 
+.main-logo-link {
+    width: fit-content;
+}
 
 /*****ICON STYLING*****/
 .brand-icon {
@@ -80,4 +83,28 @@ body {
     border-radius: 1rem 1rem;
     border: 3px solid #0322AD;
     border-left: none;
+}
+
+/*****MEDIA QUERIES*****/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px){
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Fixed top navbar on medium screens and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        padding-top: 165px;
+    }
 }
