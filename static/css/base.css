@@ -55,6 +55,11 @@ body {
 }
 
 
+.navbar-toggler{
+    border: none; !important
+}
+
+
 /*****BUTTON STYLING*****/
 .brand-button {
     background: #f3d6d3;
