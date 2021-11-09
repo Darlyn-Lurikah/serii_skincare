@@ -12,6 +12,13 @@ body {
 }
 
 
+/* Site background colour*/
+.bg-color {
+    background-color: #f3d6d3;
+}
+
+
+/*****FONTS STYLING*****/
 .logo-font {
     font-family: 'STIX Two Text', serif;
     font-weight: 700;
@@ -19,6 +26,13 @@ body {
     letter-spacing: 0.2rem;
 }
 
+/*Adds stroke to the logo to make it bolder*/
+@supports (-webkit-text-stroke: 2px #0322AD) {
+    .logo-font {
+      -webkit-text-stroke: 2px #0322AD;
+      -webkit-text-fill-color: #0322AD;
+    }
+  }
 
 .brand-title-font {
     font-family: 'STIX Two Text', serif;
@@ -26,7 +40,5 @@ body {
     color: #0322AD;
 }
 
-/* Site background colour*/
-.bg-color {
-    background-color: #f3d6d3;
-}
+
+/*****FONTS STYLING*****/
