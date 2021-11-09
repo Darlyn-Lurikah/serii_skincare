@@ -58,3 +58,15 @@ body {
     border: 4px solid #f3d6d3;
     font-weight: 700;
 }
+
+/*****SEARCH BAR STYLING*****/
+.search-bar-style {
+    border: 3px solid #0322AD;
+    border-radius: 1rem;
+}
+
+.search-button-border {
+    border-radius: 1rem 1rem;
+    border: 3px solid #0322AD;
+    border-left: none;
+}
