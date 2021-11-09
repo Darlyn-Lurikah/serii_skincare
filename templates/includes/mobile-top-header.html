@@ -50,3 +50,20 @@
     </div>
 </li>
 
+<!--Basket link dropdown mobile-->
+<li class="list-inline-item">
+    <!--If grand total exists, make text styling bold-->
+      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+          <div class="text-center">
+              <div><i class="brand-icon fas fa-shopping-bag fa-lg"></i></div>
+              <!--Displays basket total if present to two decimal places-->
+              <p class="my-0">
+                  {% if grand_total %}
+                      ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                      $0.00
+                  {% endif %}
+              </p>
+          </div>
+      </a>
+</li>
