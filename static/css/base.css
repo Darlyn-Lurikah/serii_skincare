@@ -41,4 +41,20 @@ body {
 }
 
 
-/*****FONTS STYLING*****/
+/*****BUTTON STYLING*****/
+.brand-button {
+    background: #f3d6d3;
+    color: #0322AD;
+    min-width: 260px;
+    border: 4px solid #0322AD;
+    font-weight: 700
+}
+
+.brand-button:hover,
+.brand-button:active,
+.brand-button:focus {
+    background: #0322AD;
+    color: #f3d6d3;
+    border: 4px solid #f3d6d3;
+    font-weight: 700;
+}
