@@ -3,17 +3,12 @@ html {
 }
 
 body {
-    
+    background: url('/media/home_callout.jpg') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 165px);
     background-color: #f3d6d3;
     font-family: 'Mukta Malar', sans-serif;
     
-}
-
-.jumbotron-fluid {
-    background: url('/media/home_callout.jpg') no-repeat center fixed;
-    background-size: contain;
-    height: 100vh;
 }
 
 
