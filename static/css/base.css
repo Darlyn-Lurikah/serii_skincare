@@ -17,6 +17,10 @@ body {
     background-color: #f3d6d3;
 }
 
+.bg-blue {
+    background-color: #0322AD;
+}
+
 
 /*****LOGO & FONTS STYLING*****/
 .logo-font {
@@ -43,6 +47,24 @@ body {
 .main-logo-link {
     width: fit-content;
 }
+
+.blue-text-upper {
+    color: #0322AD!important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blue-text-lower, a {
+    color: #0322AD!important;
+    font-weight: 600;
+}
+
+.pink-text-upper {
+    color: #f3d6d3;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 
 /*****ICON STYLING*****/
 .brand-icon {
