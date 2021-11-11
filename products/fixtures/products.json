@@ -22,7 +22,7 @@
         "model": "products.category", 
          "fields": {
             "name": "toner", 
-            "friendly_name": "Toner"
+            "friendly_name": "Toners"
         }
     },
 
