@@ -58,11 +58,11 @@
               <div><i class="brand-icon fas fa-shopping-bag fa-lg"></i></div>
               <!--Displays basket total if present to two decimal places-->
               <p class="my-0">
-                  {% if grand_total %}
-                      ${{ grand_total|floatformat:2 }}
-                  {% else %}
-                      $0.00
-                  {% endif %}
+                    {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                        $0.00
+                    {% endif %}
               </p>
           </div>
       </a>
