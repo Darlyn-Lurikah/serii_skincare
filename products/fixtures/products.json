@@ -3,29 +3,36 @@
         "pk": 1, 
         "model": "products.product", 
         "fields": {
-            "sku": "pp5001340155", 
+            "sku": "", 
             "name": "Hydrating Ceramide Moisturiser", 
-            "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only", 
-            "price": 25.00, 
+            "description": "Your skin is going to thank you for this. Our Hydrating Ceramide Moisturiser is deeply moisturising and strengthens your skin’s barrier to shield against water and moisture loss. Perfect for all skin types, this formula helps to build protect harsh environmental factors.", 
+            "price": 30.00, 
             "category": 1, 
             "rating": 4.7, 
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp", "image": "DP0709201205510679M.jpg"
+            "image_url": "",
+            "image": "hydrating-ceramide-moisturiser1.jpg",
+            "ingredients": "Pogostemon Cablin Leaf Oil, Salvia Officinalis Oil, Folic Acid, Corallina Officinalis Extract, Pyracantha Fortuneana Fruit Extract, Artemisia Vulgaris Extract, Tromethamine, Ceramide AP, Ceramide AS, Ceramide NS, Palmitoyl Pentapeptide-4, Ceramide EOP",
+            "directions": "Warm your Hydrating Ceramide Moisturiser with your hands and gently press into the face."
         }
     }, 
 
     {
-        "pk": 1, 
+        "pk": 2, 
         "model": "products.product", 
         "fields": {
-            "sku": "pp5001340155", 
-            "name": "Hydrating Ceramide Moisturiser", 
-            "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only", 
-            "price": 25.00, 
+            "sku": "", 
+            "name": "Vitamin C Moisturiser", 
+            "description": "You’ll feel amazing with this lightweight and velvety hydrator. Packed with Vitamin C to help correct dark spots and get your skin glowing without irritation. It even protects your face from the future breakouts, and moisture loss.", 
+            "price": 35.00, 
             "category": 1, 
-            "rating": 4.7, 
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp", "image": "DP0709201205510679M.jpg"
+            "rating": 4.0, 
+            "image_url": "",
+            "image": "vitamin-c-moisturiser1.jpg",
+            "ingredients": "Deionized Water, Sweet Almond Oil, Cetyl Alcohol, Dicaprylyl Ether, Peg-40 Stearate, Cyclopentasiloxane, Petrolatum, Glycerin, Glyceryl Mono Stearate, Vitamin E, Phenoxyethanol, Propylene Glycol, Tetrahexyldecyl Ascorbate, Glycerin (and) Glyceryl Acrylate/Acrylic Acid Copolymer, Triethanolamine, Shea butter, Olive Oil, Vitamin C, Marula Oil, Carbomer, CI19140, CI16035",
+            "directions": "Apply a small amount to fingertips and massage into skin using upward motions."
         }
     },
 
+    
 ]
 
