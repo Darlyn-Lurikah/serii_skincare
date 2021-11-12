@@ -28,6 +28,7 @@ body {
     font-weight: 700;
     color: #0322AD;
     letter-spacing: 0.2rem;
+    text-transform: uppercase;
 }
 
 /*Adds stroke to the logo to make it bolder*/
@@ -133,4 +134,15 @@ body {
     .header-container {
         padding-top: 165px;
     }
+}
+
+/* Page colour to block jombotron */
+.page-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #f3d6d3;
+    z-index: -1;
 }
