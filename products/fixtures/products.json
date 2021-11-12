@@ -1,10 +1,10 @@
 [
-    //CAT 1 - CLEANSERS
+    
     {
         "pk": 1, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5001340155", 
             "name": "Gentle Foamless Cleanser", 
             "description": "For a deep but kind to skin cleanse, choose our Gentle Foamless Cleanser. The light-weight and moisture rich formula gently works deep into the skin, leaving even sensitve skin feeling balanced and fresh.", 
             "price": 35.00, 
@@ -16,12 +16,11 @@
             "directions": "Dampen face and gently massage cleanser in circular motions using your fingertips, then rinse thoroughly with warm water."
         }
     },
-
     {
         "pk": 2, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5001600425", 
             "name": "Triple Action Cleanser", 
             "description": "Triple Action Cleanser is your make up remover, cleanser and toner in one! Packed with antioxidants and botanicals to blitz bacteria and excess oils without stripping skin of essential moisture, making it ideal for tackling blemish-prone complexions.", 
             "price": 35.00, 
@@ -33,13 +32,11 @@
             "directions": "Dampen face and gently massage cleanser in circular motions using your fingertips, then rinse thoroughly with warm water."
         }
     },
-
-    //CAT 2 - MOISTURISERS
     {
         "pk": 3, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5001730010", 
             "name": "Hydrating Ceramide Moisturiser", 
             "description": "Your skin is going to thank you for this. Our Hydrating Ceramide Moisturiser is deeply moisturising and strengthens your skin’s barrier to shield against water and moisture loss. Perfect for all skin types, this formula helps to build protect harsh environmental factors.", 
             "price": 30.00, 
@@ -51,12 +48,11 @@
             "directions": "Warm your Hydrating Ceramide Moisturiser with your hands and gently press into the face."
         }
     }, 
-
     {
         "pk": 4, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5001890157", 
             "name": "Vitamin C Moisturiser", 
             "description": "You’ll feel amazing with this lightweight and velvety hydrator. Packed with Vitamin C to help correct dark spots and get your skin glowing without irritation. It even protects your face from the future breakouts, and moisture loss.", 
             "price": 35.00, 
@@ -67,15 +63,12 @@
             "ingredients": "Deionized Water, Sweet Almond Oil, Cetyl Alcohol, Dicaprylyl Ether, Peg-40 Stearate, Cyclopentasiloxane, Petrolatum, Glycerin, Glyceryl Mono Stearate, Vitamin E, Phenoxyethanol, Propylene Glycol, Tetrahexyldecyl Ascorbate, Glycerin (and) Glyceryl Acrylate/Acrylic Acid Copolymer, Triethanolamine, Shea butter, Olive Oil, Vitamin C, Marula Oil, Carbomer, CI19140, CI16035",
             "directions": "Apply a small amount to fingertips and massage into skin using upward motions."
         }
-    },
-
-    //CAT 3 - TONERS
-    
+    },    
     {
         "pk": 5, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002111605", 
             "name": "Soothing Aloe Toner", 
             "description": "Suitable for sensitive skin, our Soothing Aloe Toner is a fragrance and alcohol-free formula that helps sweep away impurities. To be used twice daily, sweep over cleansed skin to boost and re-balance the complexion.", 
             "price": 32.00, 
@@ -87,12 +80,11 @@
             "directions": "After cleansing apply to a cotton ball/pad and wipe skin in an outward direction. Repeat until cotton is clean."
         }
     },
-
     {
         "pk": 6, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002440521", 
             "name": "2% BHA Glow Toner", 
             "description": "Our 2% BHA Glow Toner is a gentle exfoliating toner which is perfect for dull, tired skin. It refreshes and stimulates dry and congested complexions while helping to reduce discoloration.", 
             "price": 40.00, 
@@ -104,12 +96,11 @@
             "directions": "After cleansing apply to a cotton ball/pad and wipe skin in an outward direction."
         }
     },
-
     {
         "pk": 7, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002601115", 
             "name": "Brightening Toner", 
             "description": "This brightening formula is enriched with vitamins and antioxidants for glow-from-within skin. Our Brightening Toner calms the skin and evens out skin tone for an even and balanced complextion.", 
             "price": 37.00, 
@@ -121,14 +112,11 @@
             "directions": "After cleansing apply to a cotton ball/pad and wipe skin in an outward direction."
         }
     },
-    
-    //CAT 4 - SERUMS
-
     {
         "pk": 8, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002690715", 
             "name": "Retinol Serum", 
             "description": "Loaded with skin-loving ingredients, our Retinol Serum targets fine lines, hyperpigmentation and blemishes. This lightweight formula increases cell turnover and unclog pores, while visibly reducing the appearance of uneven tone and texture.", 
             "price": 25.00, 
@@ -140,12 +128,11 @@
             "directions": "Massage a small amount onto cleansed and toned skin."
         }
     },
-
     {
         "pk": 9, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002701115", 
             "name": "Skin Recovery Serum", 
             "description": "Designed to target everything from dullness and fatigue to redness and dehydration, the serum uses the firming actives 6% kombucha, white tea, 5% cantella asiatica extract and cells, and madecassoside to improve and recover the quality of the skin. The perfect routine add-on for all skin types.", 
             "price": 25.00, 
@@ -157,14 +144,11 @@
             "directions": "After cleansing and toning, apply a few drops on face, eye area, and neck."
         }
     },
-
-    //CAT 5 - BODY CLEANSER 
-
     {
         "pk": 10, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002761055", 
             "name": "Rose Body Cleanser", 
             "description": "Cleanse and restore balance to your skin with the Rose Body Cleanser. The latest addition to your bathroom routine, this aromatic cleanser helps to clean the skin gently yet thoroughly, for a refreshing feeling.", 
             "price": 27.00, 
@@ -176,12 +160,11 @@
             "directions": "Massage into skin from head to toe, creating a rich lather and rinse thoroughly."
         }
     },
-
     {
         "pk": 11, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002820069", 
             "name": "Lemonade Body Cleanser", 
             "description": "Enriched with natural lemon essential oil which is known for its purifying properties, it helps wash away bacteria and impurities, and leaves your skin clean and smelling like tall glass of lemonade on a summer day.", 
             "price": 27.00, 
@@ -193,12 +176,11 @@
             "directions": "Massage into skin from head to toe, creating a rich lather and rinse thoroughly."
         }
     },
-
     {
         "pk": 12, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002820147", 
             "name": "Exfoliating Body Cleanser", 
             "description": "A hybrid of chemical and physical exfoliants, this supercharged body scrub refines and retexturizes. Salicylic, lactic and glycolic acids wiggle inside your pores to clear dirt and debris, while superfine pumice grains and bamboo powder gently slough away dead surface skin. Niacinamide then joins the party to diffuse redness and irritation", 
             "price": 27.00, 
@@ -210,12 +192,11 @@
             "directions": "Using a circular motion, massage Exfoliating Body Cleanser onto your body, concentrating on rough or textured areas. Rinse when done. Use 2-3 times per week. Avoid open cuts or wounds. "
         }
     },
-
     {
         "pk": 13, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002910572", 
             "name": "Lavender Body Cleanser", 
             "description": "This gentle formulation provides effective antibacterial protection with Mandarin and Rosemary Extracts to help cleanse while Lavender creates a soothing effect.", 
             "price": 27.00, 
@@ -227,14 +208,11 @@
             "directions": "Massage into skin from head to toe, creating a rich lather and rinse thoroughly."
         }
     },
-
-    //CAT 6 - BODY LOTION
-
     {
         "pk": 14, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5002990740", 
             "name": "Rose Body Lotion", 
             "description": "Rose Body Lotion helps to moisturise the skin and leaves behind a floral, feminine scent, where green and fruity notes mingle with rosa centifolia floral water from provence.", 
             "price": 30.00, 
@@ -246,12 +224,11 @@
             "directions": "Massage into skin where desired and let absorb."
         }
     },
-
     {
         "pk": 15, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003050248", 
             "name": "Lemonade Body Lotion", 
             "description": "Our luscious Lemonade Body Lotion can add some zest to your beauty routine. A reviving fruity treat for skin, our body butter features natural lemon verbena extracts and coconut oil and for a luxurious formulation that hydrates normal to dry skin and leaves it lightly fragranced with lovely fresh scent.", 
             "price": 30.00, 
@@ -263,12 +240,11 @@
             "directions": "Massage into skin where desired and let absorb."
         }
     },
-
     {
         "pk": 16, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003070787", 
             "name": "Exfoliating Body Lotion", 
             "description": "A rich body cream formulated with 9% glycolic acid to expedite the shedding of dead skin cells for a smooth, refined texture. Glycomide can even help smooth the rough bumps and lumps caused by keratosis pilaris.", 
             "price": 30.00, 
@@ -280,12 +256,11 @@
             "directions": "Massage into skin where desired and let absorb. Use 2-3 times per week. Avoid open cuts or wounds. "
         }
     },
-
     {
         "pk": 17, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003090182", 
             "name": "Lavender Body Lotion", 
             "description": "Carefully formulated to leave skin wonderfully moisturised and smelling beautiful, our Lavender Body Lotion adds a fabulous touch of luxury to treat your skin to at the end of the day, this lavender cream has a wonderfully relaxing scent to help you unwind.", 
             "price": 30.00, 
@@ -297,14 +272,11 @@
             "directions": "Massage into skin where desired and let absorb."
         }
     },
-
-    //CAT 7 - BODY SCRUB
-
     {
         "pk": 18, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003090186", 
             "name": "Rose Body Scrub", 
             "description": "Exfoliating feels exquisite with this beautiful gel textured body scrub with real rose petals. Infused with the essence of roses, it effortlessly melts onto the skin and gently refines to reveal smoother, fresher skin", 
             "price": 27.00, 
@@ -316,12 +288,11 @@
             "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
         }
     },
-
     {
         "pk": 19, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003161326", 
             "name": "Lemonade Body Scrub", 
             "description": "Enjoy gentle daily skin polishing with our invigorating & uplifting Lemonade Body Scrub. Infused with natural pumice, orange water & zesty fresh lemon oil, this refreshing & exfoliating body gel-scrub smooths & refines skin to leave it feeling silky-soft & looking beautifully radiant.", 
             "price": 27.00, 
@@ -333,12 +304,11 @@
             "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
         }
     },
-
     {
         "pk": 20, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003230723", 
             "name": "Lavender Body Scrub", 
             "description": "Get soft, glowing skin in seconds with the Lavender Body Scrub. This lavender scented scrub uses sugar particles to buff and slough away dead skin cells, resulting in soft, glowing skin. Give your skin a well needed boost, resulting in extra soft and smooth skin.", 
             "price": 27.00, 
@@ -350,14 +320,11 @@
             "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
         }
     },
-
-    //CAT 8 - PERFUME
-
     {
         "pk": 21, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003270936", 
             "name": "Copenhagen", 
             "description": "Enveloping the senses in a comforting warmth, Copenhagen transports the senses to an evening spent by the fireplace at the end of a snowy day, conjuring visions of frosty air and snow-topped mountains.", 
             "price": 50.00, 
@@ -369,12 +336,11 @@
             "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
         }
     },
-
     {
         "pk": 22, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003440111", 
             "name": "Monaco", 
             "description": "Sweet and addictive, Monaco transports the senses to an evening in an intimate, dimly-lit jazz club. Conjuring up memories of liquor-infused cocktails and tobacco filling the atmosphere.", 
             "price": 50.00, 
@@ -386,12 +352,11 @@
             "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
         }
     },
-
     {
         "pk": 23, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003560513", 
             "name": "Marigot Bay", 
             "description": "Evoke the memories of summer escapes in the luscious countryside, with Marigot Bay. Seek shade from the warm sun under the lemon trees, soaking in the aroma of the zesty lemons and refreshing green leaves while you relax in the Caribbean breeze.", 
             "price": 50.00, 
@@ -403,12 +368,11 @@
             "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
         }
     },
-
     {
         "pk": 24, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003560948", 
             "name": "Vana", 
             "description": "Introducing Vana, a floral and fruity unisex fragrance. Drawing on the memory of spending springtime in the park, the scent is a delicate one, perfect for everyday wear.", 
             "price": 50.00, 
@@ -420,12 +384,11 @@
             "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
         }
     },
-
     {
         "pk": 25, 
         "model": "products.product", 
         "fields": {
-            "sku": "", 
+            "sku": "pp5003570628", 
             "name": "Kabezi", 
             "description": "Kabezi revisits those lazy, hazy days of time gone by. Wander through a bustling Parisian flower market, where petals, stems, leaves and vases spark joy in every glance.", 
             "price": 50.00, 
@@ -433,11 +396,74 @@
             "rating": 4.6, 
             "image_url": "",
             "image": "kabezi-perfume1.jpg",
-            "ingredients": "Alcohol Denat., Aqua Water, Parfum / Fragrance, Benzyl Salicylate, Linalool, Benzyl Alcohol, Hydroxycitronellal, Butyl Methoxydibenzoylmethane, Hem Cinnamal, Ethylhexyl Methoxycinnamate, Geraniol, Alpha4somethyl Ionone, Bi4t, Ethylhexyl Salicylate, Methyl Anthranilate, Benzyl Benzoate, Limonene, Citral, Citronellol, Eugenol, Cinnamyl Alcohol, Ci 172001 Red 33, Ci 15510 / Oftange 4.",
+            "ingredients": "Alcohol Denat., Aqua Water, Parfum / Fragrance, Benzyl Salicylate, Linalool, Benzyl Alcohol, Hydroxycitronellal, Butyl Methoxydibenzoylmethane, Hem Cinnamal, Ethylhexyl Methoxycinnamate, Geraniol, Alpha4somethyl Ionone, Bi4t, Ethylhexyl Salicylate, Methyl Anthranilate, Benzyl Benzoate, Limonene, Citral, Citronellol, Eugenol, Cinnamyl Alcohol",
             "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
         }
     },
-
+    {
+        "pk": 26, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "pp5003620308", 
+            "name": "Resurfacing cream", 
+            "description": "Our Resurfacing cream is specially formulated for skin that's prone to breakouts. Niacinamide, green tea, stabilised vitamin C, hyaluronic acid and aloe vera relieve congestion without blocking pores.", 
+            "price": 20.00, 
+            "category": 9, 
+            "rating": 4.1, 
+            "image_url": "",
+            "image": "resurfacing-cream1.jpg",
+            "ingredients": "Aqua, propanediol (emollient derived from corn syrup), glycerin (vegan), niacinamide (vitamin B3), sodium ascorbyl phosphate (stabilised vitamin C), salicylic acid (BHA), lactic acid (AHA), chamomille recutita (matricaria) flower extract (chamomile), aloe barbadensis leaf juice (aloe vera), sodium hyaluronate (vegan), camellia leaf extract (green tea), gellan gum (thickener), sodium anisate (preservative from star anise), sodium levulinate (preservative from sugar cane), citric acid (pH adjuster), potassium sorbate (salt of sorbic acid).",
+            "directions": "Apply to face with fingertips in an upward motion."
+        }
+    },
+    {
+        "pk": 27, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "pp5003690115", 
+            "name": "Overnight spot treatment", 
+            "description": "The Overnight spot treatment is designed to help fade and smooth blemishes while you sleep. The lightweight gel boasts a maximum strength formulation, working overtime to reduce the appearance of dark marks and redness for an even glowing complexion.", 
+            "price": 20.00, 
+            "category": 9, 
+            "rating": 3.8, 
+            "image_url": "",
+            "image": "overnight-spot-treatment1.jpg",
+            "ingredients": "Water/Aqua/Eau, SD Alcohol 40-B, Propanediol, Hamamelis Virginiana (Witch Hazel) Water, Glycerin, Salicylic Acid, Sucrose, Citrulline, Hydroxyethylcellulose, Urea, Panthenol, Lactic Acid, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sodium Hydroxide, Tetrasodium Glutamate Diacetate, Succinic Acid, Alcohol, Polysorbate 20.",
+            "directions": "Apply to desired areas with fingertips or cotton bud."
+        }
+    },
+    {
+        "pk": 28, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "pp5003690116", 
+            "name": "Dewy Skin Balm", 
+            "description": "Our Dewy Skin Balm is rich in ceramides and fatty acids that reinforce skin’s moisture barrier and lock in moisture, breathing life into stressed complexions, visibly improving skin’s texture and giving it a clean, dewy, balanced finish", 
+            "price": 20.00, 
+            "category": 10, 
+            "rating": 3.8, 
+            "image_url": "",
+            "image": "dewy-skin-balm1.jpg",
+            "ingredients": "Aqua/Water/Eau, Neopentyl Glycol Diheptanoate, Propanediol, Glycerin, Caprylic/Capric Triglyceride, Cetyl Alcohol, Stearyl Alcohol, Tridecyl Neopentanoate, Squalane, Dimethicone, Cocoglycerides, Cetyl Palmitate, Glyceryl Stearate, Butyrospermum Parkii (Shea) Butter, Aleurites Moluccanus Seed Oil, Ceramide NP, Ceramide AP, Sodium Hyaluronate, Panthenol, Astrocaryum Murumuru Seed Butter, Mel/Honey Extract/Extrait de Miel, Pyrus Malus (Apple) Fruit Extract, Tropaeolum Majus Flower/Leaf/Stem Extract, Boswellia Serrata Extract, Camellia Sinensis Leaf Extract, Sodium Benzoate, Lavandula Angustifolia (Lavender) Oil, Chondrus Crispus Extract, Ethylhexylglycerin, PEG-40 Stearate, Phenoxyethanol, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Butylene Glycol, Polyisobutene, Tocopheryl Acetate, Ceteareth-20, Caprylyl Glycol, Xanthan Gum, Trisodium Ethylenediamine Disuccinate, Hexylene Glycol, Caprylyl/Capryl Glucoside, Aspalathus Linearis Extract, Tetrapeptide-14, Linalool",
+            "directions": "Apply to face with fingertips in an upward motion."
+        }
+    },
+    {
+        "pk": 29, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "pp5003780391", 
+            "name": "Hyaluronic Acid Serum", 
+            "description": "Our Hyaluronic Acid Serum treatment penetrates deep into skin’s layers to deliver intense, long-lasting moisture that swiftly smooths and perfectly plumps. Enhanced with a boost of vitamin B5 to increase efficacy, this lightweight serum will leave skin softened and strengthened.", 
+            "price": 20.00, 
+            "category": 10, 
+            "rating": 3.8, 
+            "image_url": "",
+            "image": "hyaluronic-acid-serum1.jpg",
+            "ingredients": "Aqua (Water), Glycerin, Propanediol, Betaine, Sodium Hyaluronate, Phenoxyethanol, Ethylhexylglycerin, Chlorphenesin, Carbomer, Allantoin, Methylparaben, Xanthan Gum, Disodium Edta, Peg-40 Hydrogenated Castor Oil, Sodium Hydroxide, Tocopheryl Acetate.",
+            "directions": "Apply to face with fingertips in an upward motion."
+        }
+    }
 
 ]
 
