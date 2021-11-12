@@ -6,8 +6,7 @@
             "name": "face_wash",
             "friendly_name": "Face Wash"
         }
-    },
-        
+    },       
     {
         "pk": 2,
         "model": "products.category",
@@ -16,7 +15,6 @@
             "friendly_name": "Moisturisers"
         }
     }, 
-
     {
         "pk": 3,
         "model": "products.category", 
@@ -25,7 +23,6 @@
             "friendly_name": "Toners"
         }
     },
-
     {
         "pk": 4,
         "model": "products.category", 
@@ -34,8 +31,6 @@
             "friendly_name": "Serums"
         }
     },
-    
-
     {
         "pk": 5,
         "model": "products.category", 
@@ -44,8 +39,6 @@
             "friendly_name": "Body Wash"
         }
     },
-
-
     {
         "pk": 6,
         "model": "products.category", 
@@ -54,8 +47,6 @@
             "friendly_name": "Body Lotion"
         }
     },
-
-
     {
         "pk": 7,
         "model": "products.category", 
@@ -64,7 +55,6 @@
             "friendly_name": "Body Scrubs"
         }
     },
-
     {
         "pk": 8,
         "model": "products.category", 
@@ -73,7 +63,6 @@
             "friendly_name": "Perfume"
         }
     },
-
     {
         "pk": 9, 
         "model": "products.category", 
@@ -82,7 +71,6 @@
             "friendly_name": "New Arrivals"
         }
     }, 
-
     {
         "pk": 10, 
         "model": "products.category", 
