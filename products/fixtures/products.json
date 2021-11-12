@@ -1,13 +1,49 @@
 [
+    //CAT 1 - CLEANSERS
     {
         "pk": 1, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Gentle Foamless Cleanser", 
+            "description": "For a deep but kind to skin cleanse, choose our Gentle Foamless Cleanser. The light-weight and moisture rich formula gently works deep into the skin, leaving even sensitve skin feeling balanced and fresh.", 
+            "price": 35.00, 
+            "category": 1, 
+            "rating": 4.2, 
+            "image_url": "",
+            "image": "gentle-foamless-cleanser1.jpg",
+            "ingredients": "Aqua (Water, Eau), Coco-Betaine, Sodium Lauroyl Glycinate, Glycerin, Acrylates Copolymer, Aloe Barbadensis Leaf Juice, Phenoxyethanol, Sodium Hydroxide, Propylene Glycol, Saccharomyces/Xylinum/Black Tea Ferment, BHT, Ethylhexylglycerin, Chamomilla Recutita (Matricaria) Extract, Oenothera Biennis (Evening Primrose) Flower Extract, Potassium Sorbate, Sodium Benzoate, Citric Acid",
+            "directions": "Dampen face and gently massage cleanser in circular motions using your fingertips, then rinse thoroughly with warm water."
+        }
+    },
+
+    {
+        "pk": 2, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Triple Action Cleanser", 
+            "description": "Triple Action Cleanser is your make up remover, cleanser and toner in one! Packed with antioxidants and botanicals to blitz bacteria and excess oils without stripping skin of essential moisture, making it ideal for tackling blemish-prone complexions.", 
+            "price": 35.00, 
+            "category": 1, 
+            "rating": 4.8, 
+            "image_url": "",
+            "image": "triple-action-cleanser1.jpg",
+            "ingredients": "Aqua, PEG-7 Glyceryl Cocoate, Aloe Barbadensis Leaf Juice, Glycerin, Polysorbate 20, Phenoxyethanol, Caprylyl Glycol, Cucumis Sativus Extract, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Potassium Hydroxide, Disodium EDTA, Thymus Vulgaris Leaf Extract",
+            "directions": "Dampen face and gently massage cleanser in circular motions using your fingertips, then rinse thoroughly with warm water."
+        }
+    },
+
+    //CAT 2 - MOISTURISERS
+    {
+        "pk": 3, 
         "model": "products.product", 
         "fields": {
             "sku": "", 
             "name": "Hydrating Ceramide Moisturiser", 
             "description": "Your skin is going to thank you for this. Our Hydrating Ceramide Moisturiser is deeply moisturising and strengthens your skin’s barrier to shield against water and moisture loss. Perfect for all skin types, this formula helps to build protect harsh environmental factors.", 
             "price": 30.00, 
-            "category": 1, 
+            "category": 2, 
             "rating": 4.7, 
             "image_url": "",
             "image": "hydrating-ceramide-moisturiser1.jpg",
@@ -17,14 +53,14 @@
     }, 
 
     {
-        "pk": 2, 
+        "pk": 4, 
         "model": "products.product", 
         "fields": {
             "sku": "", 
             "name": "Vitamin C Moisturiser", 
             "description": "You’ll feel amazing with this lightweight and velvety hydrator. Packed with Vitamin C to help correct dark spots and get your skin glowing without irritation. It even protects your face from the future breakouts, and moisture loss.", 
             "price": 35.00, 
-            "category": 1, 
+            "category": 2, 
             "rating": 4.0, 
             "image_url": "",
             "image": "vitamin-c-moisturiser1.jpg",
@@ -33,6 +69,152 @@
         }
     },
 
+    //CAT 3 - TONERS
     
+    {
+        "pk": 5, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Soothing Aloe Toner", 
+            "description": "Suitable for sensitive skin, our Soothing Aloe Toner is a fragrance and alcohol-free formula that helps sweep away impurities. To be used twice daily, sweep over cleansed skin to boost and re-balance the complexion.", 
+            "price": 32.00, 
+            "category": 3, 
+            "rating": 4.1, 
+            "image_url": "",
+            "image": "soothing-aloe-toner1.jpg",
+            "ingredients": "Aqua (Water, Eau), Aloe Barbadensis Leaf Juice, Sodium Chloride, Methylparaben",
+            "directions": "After cleansing apply to a cotton ball/pad and wipe skin in an outward direction. Repeat until cotton is clean."
+        }
+    },
+
+    {
+        "pk": 6, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "2% BHA Glow Toner", 
+            "description": "Our 2% BHA Glow Toner is a gentle exfoliating toner which is perfect for dull, tired skin. It refreshes and stimulates dry and congested complexions while helping to reduce discoloration.", 
+            "price": 40.00, 
+            "category": 3, 
+            "rating": 4.2, 
+            "image_url": "",
+            "image": "glow-toner1.jpg",
+            "ingredients": "Aqua (Water, Eau), Aloe Barbadensis Leaf Juice, Propylene Glycol, Glycolic Acid, Triethanolamine, Polysorbate 20, Citrus Grandis (Grapefruit) Fruit Extract, Diazolidinyl Urea, Benzophenone-4, Methylparaben, Parfum (Fragrance), PEG-8, Trimethoxybenzylidene Pentanedione, Hydroxyacetophenone, Propylparaben, Sodium Benzoate, Citric Acid, Potassium Sorbate, Sodium Chloride, Linalool, Hexyl Cinnamal, Benzyl Alcohol, Limonene, Citronellol, Geraniol",
+            "directions": "After cleansing apply to a cotton ball/pad and wipe skin in an outward direction."
+        }
+    },
+
+    {
+        "pk": 7, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Brightening Toner", 
+            "description": "This brightening formula is enriched with vitamins and antioxidants for glow-from-within skin. Our Brightening Toner calms the skin and evens out skin tone for an even and balanced complextion.", 
+            "price": 37.00, 
+            "category": 3, 
+            "rating": 4.0, 
+            "image_url": "",
+            "image": "brightening-toner1.jpg",
+            "ingredients": "Water/Aqua, Pentylene Glycol, Citrus Grandis (Grapefruit) Fruit Water, Propanediol, Glycerin, Anthemis Nobilis Flower Water, Cucumis Sativus (Cucumber) Fruit Water, Lavandula Angustifolia (Lavender) Flower Water, Phenoxyethanol, Caprylyl Glycol, Carnosine, Undecylenoyl Glycine, Betaine, Bis-Ethoxydiglycol Cyclohexane 1,4-Dicarboxylate, Ethylhexylglycerin, Hexylene Glycol, Sodium Benzoate, Citric Acid, Potassium Sorbate, Euterpe Oleracea Fruit Extract, Ribes Nigrum (Black Currant) Fruit Extract, Rubus Villosus (Blackberry) Leaf Extract, 1,2-Hexanediol, Agastache Mexicana Flower/Leaf/Stem Extract, Beta-Glucan, Hydrolyzed Gardenia Florida Extract, Maltodextrin, Phosphatidylglycerol.",
+            "directions": "After cleansing apply to a cotton ball/pad and wipe skin in an outward direction."
+        }
+    },
+    
+    //CAT 4 - SERUMS
+
+    {
+        "pk": 8, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Retinol Serum", 
+            "description": "Loaded with skin-loving ingredients, our Retinol Serum targets fine lines, hyperpigmentation and blemishes. This lightweight formula increases cell turnover and unclog pores, while visibly reducing the appearance of uneven tone and texture.", 
+            "price": 25.00, 
+            "category": 4, 
+            "rating": 4.9, 
+            "image_url": "",
+            "image": "retinol-serum1.jpg",
+            "ingredients": "Aqua, Aloe Barbadensis Leaf Juice, Sodium Ascorbyl Phosphate, Caprylic/Capric Triglyceride, Glycerin, Limnanthes Alba (Meadowfoam) Seed Oil, Niacinamide, Dimethyl Sulfone, Sodium Hyaluronate, Salicylic Acid, Retinol, Hesperidin, Rosmarinus Officinalis (Rosemary) Leaf Extract, Centella Asiatica Extract, Hibiscus Rosa-Sinensis Flower Extract, Squalane, Citrus Paradisi (Grapefruit) Peel Oil, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Lavandula Angustifolia (Lavender) Oil, Cananga Odorata Flower Oil",
+            "directions": "Massage a small amount onto cleansed and toned skin."
+        }
+    },
+
+    {
+        "pk": 9, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Skin Recovery Serum", 
+            "description": "Designed to target everything from dullness and fatigue to redness and dehydration, the serum uses the firming actives 6% kombucha, white tea, 5% cantella asiatica extract and cells, and madecassoside to improve and recover the quality of the skin. The perfect routine add-on for all skin types.", 
+            "price": 25.00, 
+            "category": 4, 
+            "rating": 4.3, 
+            "image_url": "",
+            "image": "Skin-recovery-serum1.jpg",
+            "ingredients": "Aqua (Water), Glycerin, Polyglyceryl-4 Laurate, Tocopheryl Acetate, Saccharomyces/Xylinum/Black Tea Ferment, Carthamus Tinctorius Seed Oil (Organic), Leuconostoc/Radish Root Ferment Filtrate, Caprylyl Glycol, Lauryl Laurate, Centella Asiatica Leaf Extract, Camellia Sinensis Leaf Extract, Centella Asiatica Meristem Cell Culture, Madecassoside, Bisabolol, Sodium Hyaluronate, Hyaluronic Acid, Candelilla/Jojoba/Rice Bran Polyglyceryl-3 Esters, Hydroxyethylcellulose,  Xanthan Gum, Glyceryl Stearate, C12-15 Alkyl Benzoate, Sodium Gluconate, Sodium Stearoyl Glutamate, Potassium Sorbate, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Cetearyl Alcohol, Citric Acid, Sodium Stearoyl Lactylate, Phenoxyethanol",
+            "directions": "After cleansing and toning, apply a few drops on face, eye area, and neck."
+        }
+    },
+
+    //CAT 5 - BODY CLEANSER 
+
+    {
+        "pk": 10, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Rose Body Cleanser", 
+            "description": "Cleanse and restore balance to your skin with the Rose Body Cleanser. The latest addition to your bathroom routine, this aromatic cleanser helps to clean the skin gently yet thoroughly, for a refreshing feeling.", 
+            "price": 27.00, 
+            "category": 5, 
+            "rating": 4.3, 
+            "image_url": "",
+            "image": "rose-body-cleanser1.jpg",
+            "ingredients": "Water (Aqua), Sodium Laureth Sulfate, Cocamidopropyl Hydroxysultaine, PEG-40 Hydrogenated Castor Oil, Glycerin, Phenoxyethanol, Sea Salt (Maris Sal), Sodium Chloride, Sodium Dehydroacetate, Citric Acid, Rosa Damascena Flower Oil, Elettaria Cardamomum Seed Oil, Piper Nigrum (Black Pepper) Fruit Oil, Citronellol, Geraniol",
+            "directions": "Massage into skin from head to toe, creating a rich lather and rinse thoroughly."
+        }
+    },
+
+    {
+        "pk": 11, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Lemonade Body Cleanser", 
+            "description": "Enriched with natural lemon essential oil which is known for its purifying properties, it helps wash away bacteria and impurities, and leaves your skin clean and smelling like tall glass of lemonade on a summer day.", 
+            "price": 27.00, 
+            "category": 5, 
+            "rating": 4.8, 
+            "image_url": "",
+            "image": "lemonade-body-cleanser1.jpg",
+            "ingredients": "Water (Aqua), Sodium Laureth Sulfate, Cocamidopropyl Hydroxysultaine, PEG-40 Hydrogenated Castor Oil, Glycerin, Phenoxyethanol, Sea Salt (Maris Sal), Sodium Chloride, Sodium Dehydroacetate, Citric Acid, Rosa Damascena Flower Oil, Elettaria Cardamomum Seed Oil, Piper Nigrum (Black Pepper) Fruit Oil, Citronellol, Geraniol",
+            "directions": "Massage into skin from head to toe, creating a rich lather and rinse thoroughly."
+        }
+    },
+
+    {
+        "pk": 12, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Exfoliating Body Cleanser", 
+            "description": "A hybrid of chemical and physical exfoliants, this supercharged body scrub refines and retexturizes. Salicylic, lactic and glycolic acids wiggle inside your pores to clear dirt and debris, while superfine pumice grains and bamboo powder gently slough away dead surface skin. Niacinamide then joins the party to diffuse redness and irritation", 
+            "price": 27.00, 
+            "category": 5, 
+            "rating": 4.7, 
+            "image_url": "",
+            "image": "exfoliating-body-cleanser1.jpg",
+            "ingredients": "Aqua, Sodium C14-16 Olefin Sulfonate, Pumice, Glycerin, Niacinamide, Propanediol, Xanthan Gum, Lactic Acid, Glycolic Acid, 1, 2-hexanediol, Benzyl Alcohol, Ethylhexylglycerin, Mentha Piperita Oil, Bambusa Arundinacea Stem Extract, Salicylic Acid, Quartz, Sodium Gluconate, Sodium Hydroxide, Tocopheryl Acetate.",
+            "directions": "Using a circular motion, massage Exfoliating Body Cleanser onto your body, concentrating on rough or textured areas. Rinse when done. Use 2-3 times per week. Avoid open cuts or wounds. "
+        }
+    },
+
+
+    
+
+
+
 ]
 
