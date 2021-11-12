@@ -228,18 +228,87 @@
         }
     },
 
-
-    //CAT 6 - BODY SCRUB
+    //CAT 6 - BODY LOTION
 
     {
-        "pk": 13, 
+        "pk": 14, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Rose Body Lotion", 
+            "description": "Rose Body Lotion helps to moisturise the skin and leaves behind a floral, feminine scent, where green and fruity notes mingle with rosa centifolia floral water from provence.", 
+            "price": 30.00, 
+            "category": 6, 
+            "rating": 3.9, 
+            "image_url": "",
+            "image": "rose-body-lotion1.jpg",
+            "ingredients": "Aqua/water, coco-caprylate/caprate, glycerin, helianthus annuus (sunflower) seed oil, butyrospermum parkii (shea) butter, glyceryl stearate, cetearyl alcohol, rosa centifolia flower water, peg-100 stearate, cetyl alcohol, caprylyl glycol, ceteareth-33, hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer, chlorphenesin, xanthan gum, tocopherol, polysorbate 60, sorbitan isostearate, sodium benzoate, citric acid, parfum/fragrance, citronellol, linalool, limonene, geraniol.",
+            "directions": "Massage into skin where desired and let absorb."
+        }
+    },
+
+    {
+        "pk": 15, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Lemonade Body Lotion", 
+            "description": "Our luscious Lemonade Body Lotion can add some zest to your beauty routine. A reviving fruity treat for skin, our body butter features natural lemon verbena extracts and coconut oil and for a luxurious formulation that hydrates normal to dry skin and leaves it lightly fragranced with lovely fresh scent.", 
+            "price": 30.00, 
+            "category": 6, 
+            "rating": 4.1, 
+            "image_url": "",
+            "image": "lemonade-body-lotion1.jpg",
+            "ingredients": "Aqua, glycerin, ethylhexyl palmitate, c12-15 alkyl benzoate, cetearyl alcohol, peg-8 beeswax, montmorillonite, polysorbate 60, glyceryl stearate, peg-100 stearate, butyrospermum parkii (shea) butter, phenoxyethanol, cocos nucifera (coconut) oil, parfum, dimethicone, xanthan gum, sodium polyacrylate, acrylates/c10-30 alkyl acrylate crosspolymer, disodium edta, limonene, linalool, 2-bromo-2-nitropropane-1,3-diol, alcohol denat, lippia citriodora (lemon verbena) leaf extract, potassium sorbate, sodium benzoate, sodium hydroxide, ci 19140.",
+            "directions": "Massage into skin where desired and let absorb."
+        }
+    },
+
+    {
+        "pk": 16, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Exfoliating Body Lotion", 
+            "description": "A rich body cream formulated with 9% glycolic acid to expedite the shedding of dead skin cells for a smooth, refined texture. Glycomide can even help smooth the rough bumps and lumps caused by keratosis pilaris.", 
+            "price": 30.00, 
+            "category": 6, 
+            "rating": 4.2, 
+            "image_url": "",
+            "image": "exfoliating-body-lotion1.jpg",
+            "ingredients": "benzalkonium chloride, benzophenones/benzophenone derivatives, bisphenol a (BPA), butoxyethanol, BHT, carbomer, formaldehyde, hydroquinone, liquid petrolatum, methyl cellosolve, methylisothiazolinone, methylchloroisothiazolinone, mercury, mercury compounds, mineral oil, oxybenzone, parabens, paraffin oil, phenoxyethanol, phthalates, polyethylene glycol (PEGs), resorcinol, siloxanes, sodium nitrite, sulfates, thimerosal, triclosan, triclocarban.",
+            "directions": "Massage into skin where desired and let absorb. Use 2-3 times per week. Avoid open cuts or wounds. "
+        }
+    },
+
+    {
+        "pk": 17, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Lavender Body Lotion", 
+            "description": "Carefully formulated to leave skin wonderfully moisturised and smelling beautiful, our Lavender Body Lotion adds a fabulous touch of luxury to treat your skin to at the end of the day, this lavender cream has a wonderfully relaxing scent to help you unwind.", 
+            "price": 30.00, 
+            "category": 6, 
+            "rating": 3.8, 
+            "image_url": "",
+            "image": "lavender-body-lotion1.jpg",
+            "ingredients": "Aqua, petrolatum, isopropyl palmitate, glycerin, cetearyl alcohol, dimethicone, glyceryl stearate, butyrospermum parkii butter, peg-100 stearate, parfum, polysorbate 60, disodium edta, acrylates/c10-30 alkyl acrylate crosspolymer, imidazolidinyl urea, triethanolamine, methylparaben, propylparaben, xanthan gum, linalool, butylphenyl methylpropional, coumarin, alpha-isomethyl ionone, lavandula angustifolia (lavender) flower extract, potassium sorbate, sodium benzoate, citric acid.",
+            "directions": "Massage into skin where desired and let absorb."
+        }
+    },
+
+    //CAT 7 - BODY SCRUB
+
+    {
+        "pk": 18, 
         "model": "products.product", 
         "fields": {
             "sku": "", 
             "name": "Rose Body Scrub", 
             "description": "Exfoliating feels exquisite with this beautiful gel textured body scrub with real rose petals. Infused with the essence of roses, it effortlessly melts onto the skin and gently refines to reveal smoother, fresher skin", 
             "price": 27.00, 
-            "category": 6, 
+            "category": 7, 
             "rating": 4.3, 
             "image_url": "",
             "image": "rose-body-scrub1.jpg",
@@ -249,14 +318,14 @@
     },
 
     {
-        "pk": 14, 
+        "pk": 19, 
         "model": "products.product", 
         "fields": {
             "sku": "", 
             "name": "Lemonade Body Scrub", 
             "description": "Enjoy gentle daily skin polishing with our invigorating & uplifting Lemonade Body Scrub. Infused with natural pumice, orange water & zesty fresh lemon oil, this refreshing & exfoliating body gel-scrub smooths & refines skin to leave it feeling silky-soft & looking beautifully radiant.", 
             "price": 27.00, 
-            "category": 6, 
+            "category": 7, 
             "rating": 4.8, 
             "image_url": "",
             "image": "lemonade-body-scrub1.jpg",
@@ -266,14 +335,14 @@
     },
 
     {
-        "pk": 15, 
+        "pk": 20, 
         "model": "products.product", 
         "fields": {
             "sku": "", 
             "name": "Lavender Body Scrub", 
             "description": "Get soft, glowing skin in seconds with the Lavender Body Scrub. This lavender scented scrub uses sugar particles to buff and slough away dead skin cells, resulting in soft, glowing skin. Give your skin a well needed boost, resulting in extra soft and smooth skin.", 
             "price": 27.00, 
-            "category": 6, 
+            "category": 7, 
             "rating": 4.7, 
             "image_url": "",
             "image": "lavender-body-scrub1.jpg",
@@ -281,6 +350,7 @@
             "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
         }
     },
+
 
 
 ]
