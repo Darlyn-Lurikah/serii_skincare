@@ -351,6 +351,92 @@
         }
     },
 
+    //CAT 8 - PERFUME
+
+    {
+        "pk": 21, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Copenhagen", 
+            "description": "Enveloping the senses in a comforting warmth, Copenhagen transports the senses to an evening spent by the fireplace at the end of a snowy day, conjuring visions of frosty air and snow-topped mountains.", 
+            "price": 50.00, 
+            "category": 8, 
+            "rating": 4.7, 
+            "image_url": "",
+            "image": "copenhagen-perfume1.jpg",
+            "ingredients": "Alcohol, Aqua / Water, Parfum / Fragrance, Ethylhexyl Methoxycinnamate, Coumarin, Limonene, Ethylhexyl Salicylate, Butyl Methoxydibenzoylmethane, Linalool, Citral, Geraniol, Ci 15985 / Yellow 6, Cinnamal, Hydroxycitronellal, Eugenol, Citronellol, Ci 19140 / Yellow 5, Ci 17200 / Red 33, Ci 42090 / Blue 1.",
+            "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
+        }
+    },
+
+    {
+        "pk": 22, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Monaco", 
+            "description": "Sweet and addictive, Monaco transports the senses to an evening in an intimate, dimly-lit jazz club. Conjuring up memories of liquor-infused cocktails and tobacco filling the atmosphere.", 
+            "price": 50.00, 
+            "category": 8, 
+            "rating": 4.1, 
+            "image_url": "",
+            "image": "monaco-perfume1.jpg",
+            "ingredients": "Sucrose, Paraffinum Liquidum (Mineral Oil), Sodium Chloride, Sodium Lauryl Sulfate, PEG-100 Stearate, Glyceryl Stearate, Phenoxyethanol, Sodium Benzoate, Parfum (Fragrance), Silica, Ethylhexylglycerin, Euterpe Oleracea (Acai) Fruit Extract, CI 19140 (Yellow No 5), CI 17200 (Red No.33), Benzyl Alcohol, Benzyl Salicylate, Limonene",
+            "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
+        }
+    },
+
+    {
+        "pk": 23, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Marigot Bay", 
+            "description": "Evoke the memories of summer escapes in the luscious countryside, with Marigot Bay. Seek shade from the warm sun under the lemon trees, soaking in the aroma of the zesty lemons and refreshing green leaves while you relax in the Caribbean breeze.", 
+            "price": 50.00, 
+            "category": 8, 
+            "rating": 4.9, 
+            "image_url": "",
+            "image": "marigot-bay-perfume1.jpg",
+            "ingredients": "Alcohol, Parfum / Fragrance, Aqua / Water, Butyl Methoxydibenzoylmethane, Benzyl Salicylate, Benzyl Alcohol, Ethylhexyl Salicylate, Linalool, Limonene, Hexyl Cinnamal, Benzyl Benzoate, Benzyl Cinnamate, Geraniol, Isoeugenol, Tris(Tetramethylhydroxypiperidinol) Citrate, Cinnamal, Citral, Eugenol, Cinnamyl Alcohol, Coumarin, Ci 15510 / Orange 4, Ci 60730 / Ext. Violet 2, Ci 14700 / Red 4",
+            "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
+        }
+    },
+
+    {
+        "pk": 24, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Vana", 
+            "description": "Introducing Vana, a floral and fruity unisex fragrance. Drawing on the memory of spending springtime in the park, the scent is a delicate one, perfect for everyday wear.", 
+            "price": 50.00, 
+            "category": 8, 
+            "rating": 4.3, 
+            "image_url": "",
+            "image": "vana-perfume1.jpg",
+            "ingredients": "Alcohol, Parfum / Fragrance, Aqua / Water, Ethylhexyl Salicylate, Butyl Methoxydibenzoylmethane, Limonene, Citronellol, Hydroxycitronellal, Linalool, Benzyl Alcohol, Alpha-isomethyl Ionone, Cinnamyl Alcohol, Geraniol, Farnesol, Citral, Benzyl Benzoate, Benzyl Salicylate, Eugenol",
+            "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
+        }
+    },
+
+    {
+        "pk": 25, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Kabezi", 
+            "description": "Kabezi revisits those lazy, hazy days of time gone by. Wander through a bustling Parisian flower market, where petals, stems, leaves and vases spark joy in every glance.", 
+            "price": 50.00, 
+            "category": 8, 
+            "rating": 4.6, 
+            "image_url": "",
+            "image": "kabezi-perfume1.jpg",
+            "ingredients": "Alcohol Denat., Aqua Water, Parfum / Fragrance, Benzyl Salicylate, Linalool, Benzyl Alcohol, Hydroxycitronellal, Butyl Methoxydibenzoylmethane, Hem Cinnamal, Ethylhexyl Methoxycinnamate, Geraniol, Alpha4somethyl Ionone, Bi4t, Ethylhexyl Salicylate, Methyl Anthranilate, Benzyl Benzoate, Limonene, Citral, Citronellol, Eugenol, Cinnamyl Alcohol, Ci 172001 Red 33, Ci 15510 / Oftange 4.",
+            "directions": "Spritz onto the pulse points (on wrists, behind ears and on neck)."
+        }
+    },
 
 
 ]
