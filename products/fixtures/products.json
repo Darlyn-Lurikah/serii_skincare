@@ -211,9 +211,76 @@
         }
     },
 
+    {
+        "pk": 13, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Lavender Body Cleanser", 
+            "description": "This gentle formulation provides effective antibacterial protection with Mandarin and Rosemary Extracts to help cleanse while Lavender creates a soothing effect.", 
+            "price": 27.00, 
+            "category": 5, 
+            "rating": 4.3, 
+            "image_url": "",
+            "image": "lavender-body-cleanser1.jpg",
+            "ingredients": "Water (Aqua), Sodium Laureth Sulfate, Coco-Betaine, Coamide DEA, Sea Salt (Maris sal), d-Limonenem Citrus Nobilis (Mandarin Orange) Peel Oil, Cedrus Atlantica (Cedarwood) Bark Oil, Lavendula Angustifolia (Lavendar) Oil, Citrus Aurantium Dulcis (Orange) Oil, Linalool, Rosmarinus Officianalis (Rosemary) Leaf Oil, Citric Acid, Citral Geraniol., Methylchlorosiothasaolinone, Methylisothazlinone, Coumarin, Citronellol, Eugenol.",
+            "directions": "Massage into skin from head to toe, creating a rich lather and rinse thoroughly."
+        }
+    },
 
-    
 
+    //CAT 6 - BODY SCRUB
+
+    {
+        "pk": 13, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Rose Body Scrub", 
+            "description": "Exfoliating feels exquisite with this beautiful gel textured body scrub with real rose petals. Infused with the essence of roses, it effortlessly melts onto the skin and gently refines to reveal smoother, fresher skin", 
+            "price": 27.00, 
+            "category": 6, 
+            "rating": 4.3, 
+            "image_url": "",
+            "image": "rose-body-scrub1.jpg",
+            "ingredients": "Helianthus Annuus (Sunflower) Seed Oil, Magnesium Sulfate, Glyceryl Behenate, Glyceryl Stearate Se, Coco-Caprylate, Glycerin, Caprylyl/Capryl Glucoside, Rosa Damascena (Rose) Flower Oil, Jasminum Grandiflorum (Jasmine) Flower Extract, Lavandula Angustifolia (Lavender) Essential Oil, Salvia Officinalis (Sage) Oil, Pelargonium Graveolens Oil/ Pelargonium Asperum Oil, Tocopherol, Benzyl Alcohol, Aqua (Water), Polyglyceryl-6 Polyhydroxystearate, Polyglyceryl-6 Polyricinoleate, Sodium Cocoamphoacetate, Dehydroacetic Acid, Sodium Chloride, Benzyl Benzoate, Citronellol, Geraniol, Linalool, Ci 77007 (Ultramarines)",
+            "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
+        }
+    },
+
+    {
+        "pk": 14, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Lemonade Body Scrub", 
+            "description": "Enjoy gentle daily skin polishing with our invigorating & uplifting Lemonade Body Scrub. Infused with natural pumice, orange water & zesty fresh lemon oil, this refreshing & exfoliating body gel-scrub smooths & refines skin to leave it feeling silky-soft & looking beautifully radiant.", 
+            "price": 27.00, 
+            "category": 6, 
+            "rating": 4.8, 
+            "image_url": "",
+            "image": "lemonade-body-scrub1.jpg",
+            "ingredients": "Aqua (Water), Sodium Laureth Sulfate, Silica, Glycerin, Pumice, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Phenoxyethanol, Sodium Benzoate, Sodium Hydroxide, Parfum (Fragrance), PEG-40 Hydrogenated Castor Oil, Benzyl Alcohol, Butyl Methoxydibenzoylmethane, Citrus Aurantium Dulcis (Orange) Fruit Water, Citrus Limon (Lemon) Seed Oil, Limonene, Citral, Linalool, CI 15985 (Yellow 6), CI 19140 (Yellow 5)",
+            "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
+        }
+    },
+
+    {
+        "pk": 15, 
+        "model": "products.product", 
+        "fields": {
+            "sku": "", 
+            "name": "Lavender Body Scrub", 
+            "description": "Get soft, glowing skin in seconds with the Lavender Body Scrub. This lavender scented scrub uses sugar particles to buff and slough away dead skin cells, resulting in soft, glowing skin. Give your skin a well needed boost, resulting in extra soft and smooth skin.", 
+            "price": 27.00, 
+            "category": 6, 
+            "rating": 4.7, 
+            "image_url": "",
+            "image": "lavender-body-scrub1.jpg",
+            "ingredients": "Sucrose, Paraffinum Liquidum (Mineral Oil), Sodium Chloride, Sodium Lauryl Sulfate, PEG-100 Stearate, Glyceryl Stearate, Phenoxyethanol, Sodium Benzoate, Parfum (Fragrance), Silica, Ethylhexylglycerin, Euterpe Oleracea (Acai) Fruit Extract, CI 19140 (Yellow No 5), CI 17200 (Red No.33), Benzyl Alcohol, Benzyl Salicylate, Limonene",
+            "directions": "Using a circular motion, massage scrub into skin, concentrating on rough or textured areas. Rinse when done."
+        }
+    },
 
 
 ]
