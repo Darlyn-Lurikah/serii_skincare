@@ -39,14 +39,14 @@
                                     </a>
                                     {% endif %}
                                     <div class="card-body bg-pink">
-                                        <p class="mb-0">{{ product.name }}</p>
+                                        <p class="blue-text-upper mb-0">{{ product.name }}</p>
                                     </div>
-                                    <div class="card-footer bg-pink pt-0 boder-0 text-left">
+                                    <div class="card-footer bg-pink pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="lead mb-0 text-left brand-title-font"></p>
+                                                <p class="lead mb-0 text-left blue-text-upper">£{{ product.price }}</p>
                                                 {% if product.rating %}
-                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.price }}</small>
+                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
                                                 {% else %}
                                                     <small class="text-muted">No ratings yet!</small>
                                                 {% endif %}    
