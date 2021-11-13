@@ -112,6 +112,15 @@ body {
     border-left: none;
 }
 
+.border {
+    border: 2px solid #0322AD!important;
+    border-radius: 1rem;
+}
+
+a.category-badge > span.badge:hover {
+    background: #0322AD;
+    color: #f3d6d3;
+}
 
 /*----------------------------------------PRODUCT CARD STYLING---*/
 .card {
