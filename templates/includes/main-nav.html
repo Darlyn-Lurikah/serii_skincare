@@ -5,10 +5,11 @@
               Shop All
             </a>
             <div class="dropdown-menu border-0 bg-pink" aria-labelledby="shop-all-link">
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=face_wash,moisturisers,toner,serums,
+                body_wash,body_lotion,body_scrub,perfume,new_arrivals,sale">All Products</a>
               <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
               <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
               <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?sort=category&direction=asc">By Category</a>
-              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}">All Products</a>
             </div>
         </li> 
 
