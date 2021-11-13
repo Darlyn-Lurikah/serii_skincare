@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-dzazvloe3j3!u=vddh4@7rjhjq_$vm-kw0+w6^+vvlwhyy0eb(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['serii-skincare.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -119,7 +119,6 @@ else:
                 'NAME': BASE_DIR / 'db.sqlite3',
             }
         }
-
 
 
 # Password validation
