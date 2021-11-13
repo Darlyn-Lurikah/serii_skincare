@@ -1,0 +1,1 @@
+web: gunicorn serii-skincare.wsgi:application
