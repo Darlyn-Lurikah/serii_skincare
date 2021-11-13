@@ -3,7 +3,7 @@ from django.contrib import messages
 
 """Lets queries match product name OR description"""
 from django.db.models import Q
-from .models import Product
+from .models import Product, Category
 
 # View for all products page
 def all_products(request):
@@ -12,9 +12,26 @@ def all_products(request):
     products = Product.objects.all()
     
     """Start with none to avoid errors with empty search bar"""
-    query = None 
+    query = None
+    category = None
 
     if request.GET:
+
+        if 'category' in request.GET:
+
+            # Save GET request in var and split by commas
+            # to create a list
+            categories = request.GET['category'].split(',')
+
+            # Set products var (all products query set)
+            # to above list filtered to include
+            # category names on said list
+            products = products.filter(category__name__in=categories)
+
+            # Converting list of category str. into object list
+            # to use in template (show user current category)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -31,6 +48,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_categories' : categories,  
     }
 
     return render(request, 'products/products.html', context)
