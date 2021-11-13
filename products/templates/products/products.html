@@ -40,7 +40,7 @@
                                     <option value="rating_asc"{% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
                                     <option value="rating_desc"{% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                                     <option value="name_asc"{% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A to Z)</option>
-                                    <option value="name_asc"{% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z to A)</option>
+                                    <option value="name_desc"{% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z to A)</option>
                                     <option value="category_asc"{% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A to Z)</option>
                                     <option value="category_desc"{% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z to A)</option>
                                 </select>
@@ -102,4 +102,50 @@
             </div>
         </div>
     
+{% endblock %}
+
+{% block postloadjs %}
+        {{ block.super }}
+        <script type="text/javascript">
+            // Capture change even from sort selector
+            $('#sort-selector').change(function(){
+
+                var selector = $(this);
+                // Take in current windows location
+                var currentUrl = new URL(window.location);
+
+                // Take value of current selected item
+                // in selector box
+                var selectedVal = selector.val();
+
+                //If that value is not reset 
+                if(selectedVal != 'reset') {
+
+                    //Split the value by _ and take value at 
+                    //index 0 and 1 eg 'price' & 'asc'
+                    var sort = selectedVal.split("_")[0];
+                    var direction = selectedVal.split("_")[1];
+
+
+                    // Replace urls GET param. w/ searchParam.set method
+                    // to GET the sort and direction by these new vars
+                    currentUrl.searchParams.set('sort', sort);
+                    currentUrl.searchParams.set('direction', direction);
+
+                    // Replace location with this current location
+                    window.location.replace(currentUrl);
+                } else {
+
+                    // If reset selected, delete sort and direction
+                    // GET param
+                    currentUrl.searchParams.delete('sort', sort);
+                    currentUrl.searchParams.delete('direction', direction);
+
+                    // Replace location
+                    window.location.replace(currentUrl);
+                }
+
+            });
+
+        </script>
 {% endblock %}

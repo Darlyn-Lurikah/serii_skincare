@@ -4,6 +4,7 @@ from django.contrib import messages
 """Lets queries match product name OR description"""
 from django.db.models import Q
 from .models import Product, Category
+from django.db.models.functions import Lower
 
 # View for all products page
 def all_products(request):
