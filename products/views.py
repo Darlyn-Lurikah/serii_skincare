@@ -13,7 +13,7 @@ def all_products(request):
     
     """Start with none to avoid errors with empty search bar"""
     query = None
-    category = None
+    categories = None
 
     if request.GET:
 
@@ -48,7 +48,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'current_categories' : categories,  
+        'current_categories': categories,
     }
 
     return render(request, 'products/products.html', context)

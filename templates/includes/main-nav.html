@@ -30,9 +30,10 @@
               Bodycare
             </a>
             <div class="dropdown-menu border-0 bg-pink" aria-labelledby="bodycare-link">
-              <a class="dropdown-item blue-text-lower" href="#">Body Wash</a>
-              <a class="dropdown-item blue-text-lower" href="#">Body Lotion</a>
-              <a class="dropdown-item blue-text-lower" href="#">Body Scrub</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=body_wash">Body Wash</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=body_lotion">Body Lotion</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=body_scrub">Body Scrub</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=body_wash,body_lotion,body_scrub">All Bodycare</a>
             </div>
         </li>
 
@@ -41,7 +42,7 @@
               Fragrance
             </a>
             <div class="dropdown-menu border-0 bg-pink" aria-labelledby="fragrance-link">
-              <a class="dropdown-item blue-text-lower" href="#">Perfumes</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=perfume">Perfumes</a>
             </div>
           </li>
 
@@ -50,8 +51,9 @@
               Special Offers 
             </a>
             <div class="dropdown-menu border-0 bg-pink" aria-labelledby="all-products-link">
-              <a class="dropdown-item blue-text-lower" href="#">New arrivals</a>
-              <a class="dropdown-item blue-text-lower" href="#">Sale</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=new_arrivals">New arrivals</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=sale">Sale</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=new_arrivals,sale">All Special Offers</a>
             </div>
         </li>
     </ul>
