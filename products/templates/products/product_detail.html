@@ -29,6 +29,13 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="product-details-container mb-5 mt-md-5">
                         <p class="blue-text-upper mb-0">{{ product.name }}</p>
+                        <p class="lead mb-0 text-left blue-text-upper">£{{ product.price }}</p>
+                        {% if product.rating %}
+                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
+                        {% else %}
+                            <small class="text-muted">No ratings yet!</small>
+                        {% endif %}
+                        <p class="mt-3">{{ product.description }}</p>
                     </div>
                 </div>
             </div>
