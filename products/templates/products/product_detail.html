@@ -14,6 +14,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+
+                    <!-- Product details card -->
                     <div class="image-container my-5">
                         {% if product.image %}
                             <a href="{{ product.image.url }}" target="_blank">
@@ -30,6 +32,14 @@
                     <div class="product-details-container mb-5 mt-md-5">
                         <p class="blue-text-upper mb-0">{{ product.name }}</p>
                         <p class="lead mb-0 text-left blue-text-upper">£{{ product.price }}</p>
+                        <!--Show product category-->
+                        {% if product.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <i class="fas fa-tag mr-1">{{ product.category.friendly_name }}</i>
+                            </a>
+                        </p>
+                        {% endif %}
                         {% if product.rating %}
                             <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
                         {% else %}
