@@ -17,10 +17,11 @@
               Skincare
             </a>
             <div class="dropdown-menu border-0 bg-pink" aria-labelledby="skincare-link">
-              <a class="dropdown-item blue-text-lower" href="#">Face Wash</a>
-              <a class="dropdown-item blue-text-lower" href="#">Moisturisers</a>
-              <a class="dropdown-item blue-text-lower" href="#">Toners</a>
-              <a class="dropdown-item blue-text-lower" href="#">Serums</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=face_wash">Face Wash</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=moisturisers">Moisturisers</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=toners">Toners</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=serums">Serums</a>
+              <a class="dropdown-item blue-text-lower" href="{% url 'products' %}?category=face_wash,moisturisers,toners,serums">All Skincare</a>
             </div>
         </li>
 
