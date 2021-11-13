@@ -22,7 +22,7 @@ body {
 }
 
 
-/*****LOGO & FONTS STYLING*****/
+/*----------------------------------------LOGO & FONTS STYLING---*/
 .logo-font {
     font-family: 'STIX Two Text', serif;
     font-weight: 700;
@@ -110,6 +110,12 @@ body {
     border-radius: 1rem 1rem;
     border: 3px solid #0322AD;
     border-left: none;
+}
+
+
+/*----------------------------------------PRODUCT CARD STYLING---*/
+.card {
+    background-color: #f3d6d3!important;
 }
 
 /*****MEDIA QUERIES*****/
