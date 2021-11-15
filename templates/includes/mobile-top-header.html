@@ -53,7 +53,7 @@
 <!--Basket link dropdown mobile-->
 <li class="list-inline-item">
     <!--If grand total exists, make text styling bold-->
-      <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="">
+      <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
           <div class="text-center">
               <div><i class="brand-icon fas fa-shopping-bag fa-lg"></i></div>
               <!--Displays basket total if present to two decimal places-->
