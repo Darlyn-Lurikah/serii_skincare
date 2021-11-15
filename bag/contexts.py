@@ -1,6 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 
+
 def bag_contents(request):
 
     # Setting to 0 so theyre always empty to begin
@@ -18,9 +19,9 @@ def bag_contents(request):
         # but subtracting threshold from total
         amount_to_free_delivery = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        # if threshold met 
+        # if threshold met
         delivery = 0
-        free_delivery_delta = 0
+        amount_to_free_delivery = 0
     
     grand_total = delivery + total
     
