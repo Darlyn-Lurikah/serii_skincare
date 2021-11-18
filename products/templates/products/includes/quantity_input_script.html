@@ -1,0 +1,29 @@
+<script type="text/javascript">
+
+    // Increment item quantity 
+    //Click func for increment-qty class
+    $('.increment-qty').click(function(e) {
+        // Stop default event
+       e.preventDefault();
+       // Find closest .input-group then in that find first .qty_input
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       // Save first .qty_input current value
+       var currentValue = parseInt($(closestInput).val());
+        // Set closestInput val to currentValue + 1
+       $(closestInput).val(currentValue + 1);
+    });
+
+    // Decrement item quantity 
+    //Click func for increment-qty class
+    $('.increment-qty').click(function(e) {
+        // Stop default event
+       e.preventDefault();
+       // Find closest .input-group then in that find first .qty_input
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       // Save first .qty_input current value
+       var currentValue = parseInt($(closestInput).val());
+        // Set closestInput val to currentValue + 1
+       $(closestInput).val(currentValue - 1);
+    });
+
+</script>
