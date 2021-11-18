@@ -25,7 +25,17 @@
                 <!-- Render if bag has items -->
                 {% if bag_items %}
                     <div class="table-responsive rounded">
-                        {{ bag_items }}
+                        <table class="table table-sm table-borderless">
+                            <thead class="blue-text-upper">
+                                <tr>
+                                    <th scope="col">Product Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
                 {% else %}
                 <!-- Show message if no items in bag -->
