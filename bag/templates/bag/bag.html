@@ -56,8 +56,24 @@
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
                                 </tr>
-
                             {% endfor %}
+                            
+                            <!-- Bag total & delivery cost -->
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+
+                                    <!-- Amount to free delivery if not met -->
+                                    {% if free_delivery_delta > 0 %}
+                                        <p class="mb-1 text-danger">
+                                            You're <strong>${{ amount_to_free_delivery }}</strong> away from free delivery!
+                                        </p>
+                                    {% endif %}
+                                </td>
+                            </tr>
+
                         </table>
                     </div>
                 {% else %}
