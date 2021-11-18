@@ -74,6 +74,23 @@
                                 </td>
                             </tr>
 
+                            <!-- Keep shopping or go to checkout -->
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'products' %}" class="btn brand-button rounded-0 btn-lg">
+                                        <span class="brand-icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="blue-text-upper">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn brand-button rounded-0 btn-lg">
+                                        <span class="blue-text-upper">Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 {% else %}
