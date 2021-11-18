@@ -139,6 +139,14 @@ a.category-badge > span.badge:hover {
     background-color: #f3d6d3!important;
 }
 
+
+[data-input][type="number"]::-webkit-inner-spin-button, 
+[data-input][type="number"]::-webkit-outer-spin-button {  
+   -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
 /*****MEDIA QUERIES*****/
 
 /* Slightly larger container on xl screens */

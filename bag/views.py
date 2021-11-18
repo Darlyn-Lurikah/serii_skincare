@@ -11,7 +11,8 @@ def view_bag(request):
 # View to add products to bag
 def add_to_bag(request, item_id):
 
-    """We get from the POST form data the quantity & redirect (template 'name' attr) """
+    """We get from the POST form data the quantity & 
+    redirect (template 'name' attr) """
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
 
@@ -27,7 +28,8 @@ def add_to_bag(request, item_id):
 
     # Else add id to list ie. add to bag
     else:
-        bag[item_id] = quantity
+        bag_session[item_id] = quantity
 
     request.session['bag_session'] = bag_session
+    print(request.session['bag_session'])
     return redirect(redirect_url)
