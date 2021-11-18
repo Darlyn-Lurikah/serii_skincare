@@ -1,5 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 
 def bag_contents(request):
@@ -8,6 +10,24 @@ def bag_contents(request):
     bag_items = []
     total = 0
     product_count = 0
+
+    # Take bag session to access bag data
+    # anywhere & display in cart anywhere
+    bag_session = request.session.get('bag_session', {})
+
+    for item_id, quantity in bag_session.items():
+        # Get product obj (all product data)
+        product = get_object_or_404(Product, pk=item_id)
+        # total incremented by quantity x price
+        total += quantity * product.price
+        # product count incremented by quantity 
+        product_count += quantity
+        # Add dict to bag items 
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
 
     # Checking if user gets free delivery
     if total < settings.FREE_DELIVERY_THRESHOLD:
