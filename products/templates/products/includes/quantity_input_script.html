@@ -1,5 +1,19 @@
 <script type="text/javascript">
 
+    // Enable/disable qty counter buttons
+    function enableDisableQty(itemId) {
+        // Set itemId as value of currentValue from element with #id_qty_
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        //minus disabled when count less than 2
+        var minusDisabled = currentValue < 2;
+        //plus disabled when count less than 2
+        var plusDisabled = currentValue > 98;
+        // Prop to set disable button to True/False
+        // based on above vars
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+
     // Increment item quantity 
     //Click func for increment-qty class
     $('.increment-qty').click(function(e) {
@@ -11,6 +25,11 @@
        var currentValue = parseInt($(closestInput).val());
         // Set closestInput val to currentValue + 1
        $(closestInput).val(currentValue + 1);
+       // Pull item id data from item_id form attr
+       var itemId = $(this).data('item_id');
+       // Call qty count func, passing itemId
+       enableDisableQty(itemId);
+
     });
 
     // Decrement item quantity 
@@ -24,6 +43,11 @@
        var currentValue = parseInt($(closestInput).val());
         // Set closestInput val to currentValue - 1
        $(closestInput).val(currentValue - 1);
+       // Pull item id data from item_id form attr
+       var itemId = $(this).data('item_id');
+       // Call qty count func, passing itemId
+       enableDisableQty(itemId);
     });
+
 
 </script>
