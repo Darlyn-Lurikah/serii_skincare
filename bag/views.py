@@ -26,7 +26,7 @@ def add_to_bag(request, item_id):
     if item_id in list(bag_session.keys()):
         bag_session[item_id] += quantity
 
-    # Else add id to list ie. add to bag
+    # Else add id to dict ie. add to bag
     else:
         bag_session[item_id] = quantity
 
