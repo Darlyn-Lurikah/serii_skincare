@@ -32,6 +32,20 @@
 
     });
 
+     // Enable/disable ready on page load and 
+     // avoid adding 0 to bag as qty
+     var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        enableDisableQty(itemId);
+    }
+
+    // Check enable/disable works for both inputs
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        enableDisableQty(itemId);
+    });
+
     // Decrement item quantity 
     //Click func for increment-qty class
     $('.decrement-qty').click(function(e) {
