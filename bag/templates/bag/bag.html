@@ -52,7 +52,7 @@
                                     <td class="py-3 w-25">
 
                                         <!-- Change item quantity in the bag -->
-                                        <form class="form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -168,7 +168,7 @@
             //jquery post method
             $.post(url, data)
             // When post done, reload page
-             .done(function() {
+                .done(function() {
                 location.reload();
             });
         })
