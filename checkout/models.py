@@ -37,6 +37,23 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
 
+    def update_total(self):
+        """
+        Update grand total each time a line item is added,
+        accounting for delivery costs.
+        """
+        # Calc order total using Sum func on all 'lineitem_total' 
+        # then we set total to new query set field lineitem_total__sum 
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        # Calculate delivery cost 
+        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        else:
+            self.delivery_cost = 0
+        self.grand_total = self.order_total + self.delivery_cost
+        self.save()
+
+
     def save(self, *args, **kwargs):
         """
         Overriding original save method to set order number
