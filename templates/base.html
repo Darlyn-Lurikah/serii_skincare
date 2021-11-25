@@ -134,10 +134,11 @@
     </header>
 
     {% if messages %}
-      <div class="message-container"></div>
+      <div class="message-container">
         {% for message in messages %}
           {% include 'includes/toasts/toast_success.html' %}
         {% endfor %}
+      </div>
     {% endif %}
 
     {% block page_header %}
@@ -147,9 +148,10 @@
     {% endblock %}
 
     {% block postloadjs %}
-      // So our toasts will show
       <script type="text/javascript">
+        // So our toasts will show
         $('.toast').toast('show');
+        console.log("Js is working to show the toast")
       </script>
     {% endblock %}
 

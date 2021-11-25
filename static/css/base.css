@@ -135,6 +135,24 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+
+/*----------------------------------------TOASTS STYLING---*/
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 150px;
+    z-index: 9999999;
+}
+
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /*----------------------------------------PRODUCT CARD STYLING---*/
 .card {
     background-color: #f3d6d3!important;
