@@ -37,6 +37,15 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
 
+    def save(self, *args, **kwargs):
+        """
+        Overriding original save method to set order number
+        if order being saved doesn't have one
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
 
 
 # Model for ordered items
