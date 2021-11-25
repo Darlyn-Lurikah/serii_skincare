@@ -64,6 +64,11 @@ class Order(models.Model):
         super().save(*args, **kwargs)
 
 
+    # Return order number 
+    def __str__(self):
+        return self.order_number
+
+
 
 # Model for ordered items
 class OrderLineItem(models.Model):
@@ -71,3 +76,16 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Overriding original save method to set order number
+        if order being saved doesn't have one
+        """
+        self.lineitem_total = self.product.price * self.quantity
+        super().save(*args, **kwargs)
+
+
+    # Return sku
+    def __str__(self):
+        return f' SKU {self.product.sku} on order'
