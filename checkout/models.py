@@ -26,6 +26,19 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
 
+    """
+    Method starts with _ to show its a private
+    method (only used in this class)
+    """
+    def _generate_order_number(self):
+        """
+        Generate unique order number
+        """
+        return uuid.uuid4().hex.upper()
+
+
+
+
 # Model for ordered items
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
