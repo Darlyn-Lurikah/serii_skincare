@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'bag',
     'storages',
     'checkout',
+
+    # For form styling
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +66,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'serii_skincare.urls'
+
+# For form styling with Crispy Forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -82,6 +88,13 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',  # Makes bag contents available on whole site 
             ],
+
+            # Available in all templates
+            # No need to {%load%} on each
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
