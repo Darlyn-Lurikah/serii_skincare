@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'products',  # Adding products app to project app
     'bag',
     'storages',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # required by allauth. Dont delete.
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',  # Makes bag contents available on whole site 
             ],
         },
