@@ -140,7 +140,7 @@ a.category-badge > span.badge:hover {
 .message-container {
     position: fixed;
     top: 72px;
-    right: 150px;
+    right: 20px;
     z-index: 9999999;
 }
 
@@ -197,6 +197,13 @@ a.category-badge > span.badge:hover {
 
 .arrow-dark {
     border-bottom-color: #343a40 !important;
+}
+
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /*----------------------------------------PRODUCT CARD STYLING---*/
