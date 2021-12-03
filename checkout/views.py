@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 
 from .forms import OrderForm
 from bag.contexts import bag_contents
 
+import stripe
 
 def checkout(request):
     # Get the bag from the session
@@ -19,7 +21,7 @@ def checkout(request):
     total = current_bag('grand_total')
     # Round to 0 decimals as Stripe needs integer
     stripe_total = round(total * 100)
-    
+
     # Create instance of OrderForm
     order_form = OrderForm()
     template = 'checkout/checkout.html'
