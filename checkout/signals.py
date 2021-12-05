@@ -23,4 +23,5 @@ def update_on_save(sender, instance, **kwargs):
     """
     To update our order total on a lineitem delete
     """
+    print('Delete signal recieved!')
     instance.order.update_total()

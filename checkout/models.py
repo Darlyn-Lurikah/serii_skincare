@@ -44,7 +44,7 @@ class Order(models.Model):
         """
         # Calc order total using Sum func on all 'lineitem_total' 
         # then we set total to new query set field lineitem_total__sum 
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         # Calculate delivery cost 
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100

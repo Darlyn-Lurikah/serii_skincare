@@ -2,12 +2,16 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+import stripe
+
 from products.models import Product
 from bag.contexts import bag_contents
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
-import stripe
+
+
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -29,7 +33,7 @@ def checkout(request):
             'county': request.POST['county'],
         }
         # Create form instance w/ checkout form data
-        order_form = OrderForm(form_data),
+        order_form = OrderForm(form_data)
 
         # If form valid, save order
         if order_form.is_valid():
@@ -37,7 +41,7 @@ def checkout(request):
             order.save()
             # Iterate through bag items to create
             # each line item
-            for item_id, item_data in bag.items():
+            for item_id, item_data in bag_session.items():
                 try:
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
@@ -47,7 +51,7 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                # If order doesnt exist, show message         
+                # If order doesnt exist, show message     
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't "
@@ -57,8 +61,8 @@ def checkout(request):
                     # Delete nonexistent order & redirect
                     order.delete()
                     return redirect(reverse('view_bag'))
-            
-            # Option to save info to user profile 
+         
+            # Option to save info to user profile
             request.session['save_info'] = 'save-info' in request.POST
             # Redirect to order success page
             return redirect(reverse('checkout_success',
@@ -69,7 +73,7 @@ def checkout(request):
                                      'Please double check your information.'))
 
 
-    else: 
+    else:
         bag_session = request.session.get('bag_session', {})
         if not bag_session:
             # Error message & redirect if nothing in bag
@@ -115,7 +119,7 @@ def checkout_success(request, order_number):
     """
     # Check if user saved info to profile
     save_info = request.session.get('save_info')
-    # Get order no. 
+    # Get order no.
     order = get_object_or_404(Order, order_number=order_number)
 
     # Success message
