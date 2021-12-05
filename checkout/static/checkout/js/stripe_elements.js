@@ -1,11 +1,10 @@
 
 // -- Adding stripe to checkout --
 // Get element ids. Use slice to take quote marks off 
-var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-console.log(stripe_public_key);
-var client_secret = $('#id_client_secret').text().slice(1, -1);
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+var clientSecret = $('#id_client_secret').text().slice(1, -1);
 // Create stripe var
-var stripe = Stripe(stripe_public_key);
+var stripe = Stripe(stripePublicKey);
 // Create instance of stripe
 var elements = stripe.elements();
 
@@ -55,4 +54,41 @@ card.addEventListener('change', function (event) {
   } else {
       errorDiv.textContent = '';
   }
+});
+
+
+// -- Handling payment form submit --
+var form = document.getElementById('payment-form');
+
+// Listen for submit
+form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    // Disable to prevent multiple submits
+    card.update({ 'disabled': true});
+    $('#submit-button').attr('disabled', true);
+    // Call confirmCardPayment method & give stripe card
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function(result) {
+      // if error, show error message 
+        if (result.error) {
+            var errorDiv = document.getElementById('card-errors');
+            var html = `
+                <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            // Enable card & submit to correct error
+            card.update({ 'disabled': false});
+            $('#submit-button').attr('disabled', false);
+        } else {
+            // Else submit payment form
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
 });
