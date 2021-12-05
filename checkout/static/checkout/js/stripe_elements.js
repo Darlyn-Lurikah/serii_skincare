@@ -2,6 +2,7 @@
 // -- Adding stripe to checkout --
 // Get element ids. Use slice to take quote marks off 
 var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
+console.log(stripe_public_key);
 var client_secret = $('#id_client_secret').text().slice(1, -1);
 // Create stripe var
 var stripe = Stripe(stripe_public_key);

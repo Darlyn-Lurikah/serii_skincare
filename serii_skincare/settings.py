@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
+
 import os
 import dj_database_url
 
@@ -223,7 +224,7 @@ FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'gbp'
 # Both keys set in gitpod env vars
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '') 
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 
