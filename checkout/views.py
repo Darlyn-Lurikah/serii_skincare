@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
+from .models import OrderLineItem
+from products.models import Product
 from bag.contexts import bag_contents
 
 import stripe
@@ -31,6 +33,7 @@ def checkout(request):
 
         # If form valid, save order
         if order_form.is_valid():
+            order = order_form.save()
             order.save()
             # Iterate through bag items to create
             # each line item
@@ -54,6 +57,16 @@ def checkout(request):
                     # Delete nonexistent order & redirect
                     order.delete()
                     return redirect(reverse('view_bag'))
+            
+            # Option to save info to user profile 
+            request.session['save_info'] = 'save-info' in request.POST
+            # Redirect to order success page
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
+        else:
+            # If order form not valid, show message
+            messages.error(request, ('There was an error with your form. '
+                                     'Please double check your information.'))
 
 
 
