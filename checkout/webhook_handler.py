@@ -38,29 +38,38 @@ class StripeWH_Handler:
 
         # Assume order doesnt exist 
         order_exists = False
-
-        # Then try to find order from payment intent with
-        # iexact lookup field (case insensitve)
-        try:
-            order = Order.objects.get(
-                full_name__iexact=shipping_details.name,
-                email__iexact=billing_details.email,
-                phone_number__iexact=shipping_details.phone,
-                country__iexact=shipping_details.address.country,
-                postcode__iexact=shipping_details.address.postal_code,
-                town_or_city__iexact=shipping_details.address.city,
-                street_address1__iexact=shipping_details.address.line1,
-                street_address2__iexact=shipping_details.address.line2,
-                county__iexact=shipping_details.address.state,
-                grand_total=grand_total,
-            )
-            # If found set var to True
-            order_exists = True
+        attempt = 1
+        # Webhook will look for order 5 times
+        # before we create one 
+        while attempt <= 5:
+            # Then try to find order from payment intent with
+            # iexact lookup field (case insensitve)
+            try:
+                order = Order.objects.get(
+                    full_name__iexact=shipping_details.name,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=shipping_details.phone,
+                    country__iexact=shipping_details.address.country,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    town_or_city__iexact=shipping_details.address.city,
+                    street_address1__iexact=shipping_details.address.line1,
+                    street_address2__iexact=shipping_details.address.line2,
+                    county__iexact=shipping_details.address.state,
+                    grand_total=grand_total,
+                )
+                # If found set var to True
+                order_exists = True
+                break
+            except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
+        if order_exists:
             return HttpResponse(
                 content=(f'Webhook received: {event["type"]} | SUCCESS: '
                     'Verified order already in database'),
                     status=200)
-        except Order.DoesNotExist:
+        else:
+            order = None
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
@@ -89,13 +98,9 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-                
-            
-
-        print(intent)
-        return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
-            status=200)
+            return HttpResponse(
+                content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+                status=200)
 
     def handle_payment_intent_payment_failed(self, event):
         """
