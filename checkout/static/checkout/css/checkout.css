@@ -58,3 +58,15 @@
     margin: 0;
     height: 100%;
 }
+
+/* Grey out 'Country' label in 
+dropdown if no selection */
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
