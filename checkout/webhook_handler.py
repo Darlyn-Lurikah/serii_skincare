@@ -5,8 +5,9 @@ class StripeWH_Handler:
     """Custom class to Handle Stripe webhooks"""
 
     def __init__(self, request):
-        """ Assigning as class attr, lets us access 
-        request attr from Stripe"""
+        """ Assigning as class attr, lets us access
+        request attr from Stripe
+        """
         self.request = request
 
     def handle_event(self, event):
