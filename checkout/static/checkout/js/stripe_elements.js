@@ -68,6 +68,23 @@ form.addEventListener('submit', function(ev) {
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
+
+    // Check if info saved is True (checked)
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    // We get token from {% csrf_token %} in the form
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    // Passing info to cache_checkout_data view
+    var postData = {
+      'csrfmiddlewaretoken': csrfToken,
+      'client_secret': clientSecret,
+      'save_info': saveInfo,
+    };
+    // New view url 
+    var url = '/checkout/cache_checkout_data/';
+
+
+
+
     // Call confirmCardPayment method & give stripe card
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
