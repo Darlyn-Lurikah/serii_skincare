@@ -21,7 +21,6 @@ class UserProfileForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         # Dict of placeholders to show in form fields
         placeholders = {
-            'default_full_name': 'Full Name',
             'default_email': 'Email Address',
             'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',

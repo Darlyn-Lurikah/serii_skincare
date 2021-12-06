@@ -68,6 +68,7 @@ form.addEventListener('submit', function(ev) {
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
+    
 
     // Check if info saved is True (checked)
     var saveInfo = Boolean($('#id-save-info').attr('checked'));

@@ -8,7 +8,7 @@ def profile(request):
      
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    """To post user profile form"""
+    """To post user profile form and update it"""
     if request.method == 'POST':
         # Create new instance of profile form w/ post data
         form = UserProfileForm(request.POST, instance=profile)
@@ -17,7 +17,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
 
-    form = UserProfileForm(request.POST, instance=profile)
+    else:
+        form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'

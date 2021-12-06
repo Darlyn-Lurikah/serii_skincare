@@ -10,10 +10,12 @@ from products.models import Product
 from bag.contexts import bag_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 
 
+
+@require_POST
 def cache_checkout_data(request):
     try:
         # Take payment intent id from splitting
@@ -114,15 +116,37 @@ def checkout(request):
         # Round to 0 decimals as Stripe needs integer
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
-        # Create and give payintent our total and currency 
+        # Create and give payintent our total and currency
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
 
-
-    # Create instance of OrderForm
-    order_form = OrderForm()
+        """AUTOFILL CHECKOUT FORM WITH USER DATA"""
+        # If user authenticated, try to prefill order
+        # form with any form data we have
+        if request.user.is_authenticated:
+            try:
+                # Get user profile objects to take data from profile
+                profile = UserProfile.objects.get(user=request.user)
+                # Use 'initial' to prefill below fields
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            # If user not authenticated, render empty form
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            # Create instance of OrderForm
+            order_form = OrderForm()
 
     #  Alert if public key forgotten
     if not stripe_public_key:
@@ -144,11 +168,13 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
+    # PREFILL CHECKOUT FORM WITH USER DATA
     # Check if user saved info to profile
     save_info = request.session.get('save_info')
     # Get order no.
     order = get_object_or_404(Order, order_number=order_number)
 
+    """AUTOFILL PROFILE FORM WITH USER DATA"""
     # If user authenticated (has a profile)
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -160,12 +186,12 @@ def checkout_success(request, order_number):
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
-                'default_country': order.country,
-                'default_postcode': order.postcode,
-                'default_town_or_city': order.town_or_city,
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
+                'default_town_or_city': order.town_or_city,
                 'default_county': order.county,
+                'default_postcode': order.postcode,
+                'default_country': order.country,
             }
             # Create isntance of user profile form from profile data
             #  instance=what_youre_updating
