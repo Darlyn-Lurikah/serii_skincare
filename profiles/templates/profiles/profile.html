@@ -78,6 +78,9 @@
                 </div>
             </div>
         </div>
+        {% for favourite in favourites %}
+            <p>{{ favourite.product.name }}</p>
+        {% endfor %}    
     </div>
     
 {% endblock %}

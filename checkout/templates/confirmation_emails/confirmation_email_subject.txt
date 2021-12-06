@@ -1,0 +1,1 @@
+Serii Skincare Order Confirmation for Order No. {{ order.order_number }}
