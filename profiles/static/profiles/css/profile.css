@@ -1,3 +1,12 @@
+
+/* Order history scrollbar past max height */
+.order-history {
+    max-height: 416px; /* height of profile form & submit button */
+    overflow-y: auto;
+}
+
+
+
 /*----------------------------------------PROFILE FORM STYLING---*/
 
 #profile-update-form .form-control {
@@ -17,3 +26,4 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
