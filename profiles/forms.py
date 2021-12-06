@@ -34,7 +34,7 @@ class UserProfileForm(forms.ModelForm):
         # Makes cursor start in full_name field
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
 
-        # Iterate through & add * if required form fields 
+        # Iterate through & add * if required form fields
         for field in self.fields:
             if field != 'default_country':
                 if self.fields[field].required:
@@ -44,7 +44,7 @@ class UserProfileForm(forms.ModelForm):
 
                 # Set form fields to dict placeholders (above)
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            # Add our css class 
+            # Add our css class
             self.fields[field].widget.attrs['class'] = 'rounded-0 profile-form-input'
-            # Remove field label as We're using placeholders 
+            # Remove field label as We're using placeholders
             self.fields[field].label = False
