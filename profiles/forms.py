@@ -6,8 +6,7 @@ class UserProfileForm(forms.ModelForm):
     
     class Meta:
         model = UserProfile
-        
-        exculde = ('user',)
+        exclude = ('user',)
 
     # Overriding form init method to 
     # customise form
@@ -46,6 +45,6 @@ class UserProfileForm(forms.ModelForm):
                 # Set form fields to dict placeholders (above)
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             # Add our css class 
-            self.fields[field].widget.attrs['class'] = 'brand-button rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = 'rounded-0 profile-form-input'
             # Remove field label as We're using placeholders 
             self.fields[field].label = False
