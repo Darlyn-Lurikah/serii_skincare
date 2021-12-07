@@ -102,6 +102,7 @@
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
+                                    {% csrf_token %}
                                     <input type="submit" class="btn brand-button rounded-0 text-uppercase mt-5" value="Add to Bag">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">   

@@ -32,6 +32,10 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['serii-skincare.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-lime-kite-tbb0ijwg.ws-eu21.gitpod.io',
+    'https://serii-skincare.herokuapp.com'
+]
+
 
 # Application definition
 
