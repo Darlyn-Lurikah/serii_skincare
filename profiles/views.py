@@ -24,6 +24,7 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+    """ Display user favourites in profile """
     favourites = list(Product_favourite.objects.filter(user_profile=profile))
 
     template = 'profiles/profile.html'

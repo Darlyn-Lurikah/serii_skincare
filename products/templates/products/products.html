@@ -71,8 +71,8 @@
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ product.name }}">
                                     </a>
                                     {% endif %}
-                                    <div class="card-body bg-pink">
-                                        <p class="blue-text-upper mb-0">{{ product.name }}</p>
+                                    <div class="card-body pl-0 bg-pink">
+                                        <p class="blue-text-upper mb-0">{{ product.name }} <span class=""><a href="{% url 'edit_product' product.id %}"><i class="fas fa-heart"></i></a></span></p>
                                     </div>
                                     <div class="card-footer bg-pink pt-0 border-0 text-left">
                                         <div class="row">
