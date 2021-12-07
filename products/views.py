@@ -99,8 +99,22 @@ def product_detail(request, product_id):
 def add_product(request):
     """ To add a product to shop """
 
-    # render instance of product form
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Store the product when save called
+            product = form.save()
+            # Show added success message
+            messages.success(request, f'{product.name} added successfully!')
+            # Redirect to product's own page
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request,
+                           ('Failed to add product. '
+                            'Please ensure the form is valid.'))
+    else:
+        # render instance of product form
+        form = ProductForm()
 
     template = 'products/add_product.html'
     context = {
@@ -142,3 +156,16 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ To delete a product from the shop """
+
+    # Get product and product id
+    product = get_object_or_404(Product, pk=product_id)
+    # Delete product 
+    product.delete()
+    # Show deleted success message
+    messages.success(request, f'{product.name} deleted successfully!')
+    # Redirect to all products page
+    return redirect(reverse('products'))
