@@ -90,7 +90,15 @@
                                                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
                                                 {% else %}
                                                     <small class="text-muted">No ratings yet!</small>
-                                                {% endif %}    
+                                                {% endif %}
+
+                                                <!-- Edit and delete product btns -->
+                                                {% if request.user.is_superuser %}
+                                                    <small class="ml-3">
+                                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    </small>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>

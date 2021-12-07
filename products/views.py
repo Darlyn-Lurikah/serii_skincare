@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 """Lets queries match product name OR description"""
 from django.db.models import Q
@@ -96,8 +97,14 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """ To add a product to shop """
+
+    # Show message if not superuser
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised to do that')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -123,9 +130,14 @@ def add_product(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_product(request, product_id):
     """ To edit/update a product in the shop """
+
+    # Show message if not superuser
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised to do that')
+        return redirect(reverse('home'))
 
     # Get product and product id 
     product = get_object_or_404(Product, pk=product_id)
@@ -157,9 +169,14 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_product(request, product_id):
     """ To delete a product from the shop """
+
+    # Show message if not superuser
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised to do that')
+        return redirect(reverse('home'))
 
     # Get product and product id
     product = get_object_or_404(Product, pk=product_id)
