@@ -20,7 +20,6 @@ class StripeWH_Handler:
         """
         self.request = request
 
-
     def _send_confirmation_email(self, order):
         """To send order confirmation emails"""
         
@@ -38,7 +37,7 @@ class StripeWH_Handler:
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
+            [cust_email],
         )
 
 
