@@ -253,3 +253,70 @@ Toasts notify users of whats happening or actions being taken, such as, but not 
 
 
 
+## Defensive Design
+
+Defensive design features are as follows:
+
++ Form validation:
+   + Form will show warning and not submit of data is incorrect
+   + Image files are vefified by Django's ImageField
+
++ Adding products to the bag:
+   + A user cannot add more that 99 of a product to the bag at one time
+   + A user cannot add 0 quantity of a product to the bag
+   + If an item is in a bag an the user changes the quantity to 0, the item will be removed from the bag
+
++ Default images:
+   + The images if an image is not present, a default image will take its place
+
++ Authenticated vs unauthenticated user pages:
+   + The @login_required decorator has been used to ensure unauthenticated users don't access unauthorised pages
+   + If a user with no bag items tries to access the checkout page via URL, they will be redirected to the products page and receive a notification
+   + If an unauthenticted user tries to access a restricted page they will be redirected
+
+---
+
+# Database
+
+Relational databases SQLite and Postgres were used. SQLite for development and Postgres for the deployed Heroku project.
+
+Below is an image of how the database models relate to each other:
+
+![Database schema](docs/database-schema.png)
+
+
+### Categories
+
++ Stores the product category details
++ Sends information to the products model to catagorize the type of product being sold
+
+
+### Products
+
++ Stores the details of products the user can purchase
++ Pulls information from the categories model to catagorise the type of product being sold
++ Sends information to the OrderLineItem model to create the purchase
+
+
+### OrderLineItem
+
++ Stores a product that has been added to the users bag
++ Pulls information from the products model to add to the users order
++ Sends information to the Order model to update the order information
+
+
+### Order
+
++ Stores the users order information
++ Pulls information from the OrderLineItem model to add products to the order
++ Pulls information from the UserProfile model to attach the order to their profile
+
+### UserProfile
+
++ Stores the users delivery and order purchased order information
++ Pulls information from the User model to create the user profile
++ Sends information to the Order model to attach the order to their profile
+
+
+
+
