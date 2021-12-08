@@ -1,12 +1,10 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
 from products.models import Product
-from products.models import Product_favourite
-from django.http import HttpResponseRedirect
 
 
 @login_required
@@ -27,15 +25,11 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
-    # Get list of users favourited products
-    favourites = list(Product_favourite.objects.filter(user_profile=profile))
-
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
         'on_profile_page': True,
-        'favourites' : favourites,
     }
 
     return render(request, template, context)
@@ -58,16 +52,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-
-
-@login_required
-def delete_favourite(request, product_id):
-    
-    if request.method == 'POST':
-        # Get product and product id
-        product = get_object_or_404(Product, pk=product_id)
-    
-        # Delete product
-        product.delete()
-  
-    return redirect(reverse('profiles'))

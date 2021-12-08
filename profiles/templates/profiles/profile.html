@@ -78,28 +78,6 @@
             </div>
         </div>    
     </div>
-    <!-- Favourited products -->
-    {% for favourite in favourites %}
-        <div class="card" style="width: 18rem;">
-            {% if favourite.product.image %}
-                <a href="{% url 'product_detail' favourite.product.id %}">
-                    <img class="card-img-top" src="{{ favourite.product.image.url }}" alt="{{ favourite.product.name }}">
-                </a>
-            {% else %}
-                <a href="{% url 'product_detail' favourite.product.id %}"></a>
-                    <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ favourite.product.name }}">
-                </a>     
-            {% endif %}
-            <div class="card-body">
-            <h5 class="blue-text-lower">{{ favourite.product.name }}</h5>
-            </div>
-        </div>
-        <form action="{% url 'delete_favourite' product.id %}" method="post">
-            {% csrf_token %}
-            <button class="text-danger" href="">Remove</button>
-        </form>
-        
-    {% endfor %}
     
 {% endblock %}
 
