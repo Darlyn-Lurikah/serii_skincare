@@ -199,8 +199,57 @@ Located in the 'My Account' dropdown, in 'Product Management'. Or from the produ
 From the products catergory pages or the individual product detail page. 
 
 
+### **Bag page**
 
+A user can navigate to the bag page to see what items they placed in it.  
 
+From the bag a user can:  
++ Increase or decreae the quantity of a product
++ Remove a product
++ Naviagate to the checout page
+
+---
+
+### **Checkout page**
+
+In the checkout page a user can:
++ Input new delivery information if needed or are checking out as a guest
++ Use their saved default delivery address if they are a registered user logged in
++ Pay via Stripe for secure payments
++ update their profile with the inputted edlivery information(if they have an account and are logged in)
++ A loading screen will appear when a payment is being processed to encourage the user to wait
++ Stripe will still create the order if the payment form doesn't submit properly or the user closes the browser prematurely 
++ An order confirmation email wil be sent to the user containing order details 
+
+---
+
+### **Emails**
+
+The site will send real emails for:
+
++ New customer registration email validation
++ Order confirmation
++ A user needs to update their password
+---
+
+### **Toasts**
+
+Toasts notify users of whats happening or actions being taken, such as, but not limited to:
+
++ When a user sucessfuly signs in/signs out
++ When a user adds a product to a bag
++ When an admin adds/edits items
++ When an admin's CRUD action fails
++ When a user is viewing previous order details
++ Stripe key not found 
++ When a user is trying to access an unautorized page
+
+---
+
+## Future Features
++ A rating system where users can rate or comment previously purchased prodcuts 
++ Ability to 'save' products to a users own account to refer back to.
++ Allow users to delete their account
 
 
 
