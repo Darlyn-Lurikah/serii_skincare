@@ -174,5 +174,33 @@ All product options can be sorted by:
 ---
 
 
+### **Product Details Page**
+
+From the product detail page, the user can:
++ View Product name
++ View Product description
++ Select a quantity 
++ Add product to bag 
++ Go back to all products page 
+
+
+
+### **Admin CRUD functionality**
+
+Admin users have all the features of non admin users with the addition of CRUD functionality. From the site admin can add, edit and delete products, without the admin panel
++ Add Product: 
+Located in the 'My Account' dropdown, in 'Product Management'.
+
+
++ Edit Product: 
+Located in the 'My Account' dropdown, in 'Product Management'. Or from the products catergory pages or the individual product detail page will naviagate to the edit product form in 'Product Management'. 
+
++ Delete Product:
+From the products catergory pages or the individual product detail page. 
+
+
+
+
+
 
 
