@@ -71,5 +71,108 @@ The brand font I chose is [STIX Two Text](https://fonts.google.com/specimen/STIX
 As the project went on, the wireframe design changed do to design limiations and time constraints. 
 
 
+# Features
+## Current Features
+### **Navigation menu displayed on pages**
+
+The navigation menu on all pages hepls users move easily through the site.
+
+The navigation buttons update depending on whether a user is logged in, logged out or logged in as Admin:
+
+| Nav Link              |Not logged in  |Logged in as user|Logged in as admin
+|:-------------         |:------------- |:----------------|:------------- |
+|Logo(back to home)     |yes            |yes              |yes
+|Product Management     |no             |no               |yes
+|My Profile             |no             |yes              |yes
+|Sign Out               |no             |yes              |yes
+|Register               |yes            |no               |no
+|Sign In                |yes            |no               |no
+|All Nav Products       |yes            |yes              |yes
+
+
+
+### **Registration not required to browse**
+
+Perhaps the most importaqnt feature as most users will simply want to browse the site out of curiosity. 
+
+
+### **Registration not required to purchase**
+
+This was the second important feature as the majourity of users will want to buy quickly so being required to have an account to buy would be time consuming and off putting to users.  
+
+### **User profile creation**
+
+If a user wants to create a profile, they can. The features of registations are:
+
++ Username
+   + A user can choose a unique username thats not taken but any other user
+   + A notification will tell user if their undername is avaialble
+
++ Email address
+   + A user needs to create a profile using an email address
+   + The email is required twice to decrease chance of user error
+   + An automatic email is sent to the user to confirm it is their the email address and set up their account 
+
++ Password
+   + The password must be entered twice to decrease chance of user error 
+
+A user with a profile can:
++ Access order history displayed in their profile.
++ Save default delivery information to their profile from the checkout page
++ Update default delivery information to their profile from their profile page
+
+
+---
+
+### **Products Page**
+
+Both authorised and unorthorised users can browse the products.
+They browse the following product options
+Products can be sorted by:
+
++ Shop All:
+   + All products
+   + By Price
+   + By Rating
+   + By Category
+
+
++ Skincare:
+   + Face wash
+   + Moisturisers
+   + Toners
+   + Serums
+   + All skincare
+
+
++ Bodycare:
+   + Body wash
+   + Body lotion
+   + Body scrub
+   + All Bodycare
++ Fragrance:
+   + Perfumes
+
+
++ Special offers:
+   + New arrivals
+   + Sale
+   + All special offers
+
+All product options can be sorted by:
+
+   + Price (low to high)
+   + Price (high to low)
+   + Rating (low to high)
+   + Rating (high to low)
+   + Name (A-Z)
+   + Name (Z-A)
+   + Catergory (A to Z)
+   + Catergory (Z to A)
+
+
+---
+
+
 
 
