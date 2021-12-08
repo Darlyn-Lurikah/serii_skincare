@@ -319,6 +319,167 @@ Below is an image of how the database models relate to each other:
 
 
 
+# Deployment
+
+## Heroku Deployment
+This project was deployed to Heroku from Gitpod by doing the following:
+
+### Requirements.txt and Procfile
+For Heroku to know which packages and technologies are being used in a project we need to save them all to a requirements.txt file. Before creating the Heroku app, create these files by doing this: 
++ In the GitPod terminal, type ```pip3 freeze --local > requirements.txt``` to create your requirements file.
++ Create your Procfile and input the following: ```web: gunicorn ARTstop.wsgi:application``` Do not put a blank line beneath
++ Push these files to your repository.
+
+### Creating Heroku App
++ Log into Heroku your heroku account (create on if you don't have one)
++ In your dashboard select 'Create New App'
++ Choose an app name, preferably similar to your project (Ensure you have no apps with the same name. You can only use an app name once)
++ Select the appropriate region closest your location
++ Click 'Create App'
+
+### Connecting Heroku to GitHub
++ From the dashboard, click the 'Deploy' tab near the top of the screen
++ From here, locate 'Deployment Method' and choose 'GitHub'
++ A search bar will appear, find your repository by name
++ When you have found the correct repository, click 'Connect'
++ DO NOT CLICK 'ENABLE AUTOMATIC DEPLOYMENT' YET. This can cause unexpected errors before configuration.
+
+### Environment Variables
++ Still in Heroku, click the 'Settings' tab near the top of the page
++ Scroll down to 'Config Vars' and click 'Reveal Config Vars'
++ The following variables all need to be added:
+
+|Variable name         |Value/where to find value                                |
+| ---------------------|---------------------------------------------------------|
+|AWS_ACCESS_KEY_ID     |AWS CSV file(instuctions below)                          |
+|AWS_SECRET_ACCESS_KEY |AWS CSV file(instuctions below)                          |
+|DATABASE_URL          |Postgres generated (instructions below)                  |
+|EMAIL_HOST_PASS       |Password from email client                               |
+|EMAIL_HOST_USER       |Site's email address                                     |
+|SECRET_KEY            |Random key generated online                              |
+|STRIPE_PUBLIC_KEY     |Stripe Dashboard > Developers tab > API Keys > Publishable key |
+|STRIPE_SECRET_KEY     |Stripe Dashboard > Developers tab > API Keys > Secret key |
+|STRIPE_WH_SECRET      |Stripe Dashboard > Developers tab > Webhooks > site endpoint > Signing secret |
+|USE_AWS               |True (when AWS set up - instructions below)              |
+
+
+### Heroku Postgres Database
++ Go to the resources tab in Heroku.
++ In the Add-ons search bar look for Heroku Postgres & select it.
++ Select the Hobby Dev-Free option in plans.
++ Click submit order form.
++ Go back to the build environment and install 2 more requirements:
+  + ```pip3 install dj_databse_url```
+  + ```pip3 install psycopg2-binary```
+  don't forget to add these to the requirements file using ```pip3 freeze > requirements.txt``` 
+
+
+## Setting up AWS
+
+### AWS S3 Bucket
++ From the 'Services' tab on the AWS Management Console, search 'S3' and click it.
++ Select 'Create a new bucket', give it a name(associated with the Heroku app name), and choose the closest region to your location.
++ Ensure 'Block all public access' is **unchecked**(you may need to confirm that public access will be granted).
++ Ignore any other settings that you are asked to change and click 'Create bucket'.
++ Open the created bucket, go to the 'Properties' tab and turn on static website hosting(fill in index.html and error.html as defaults) and click save.
++ Open the 'Permissions' tab, locate the CORS configuration section and add the following code:
+
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
++ In the 'Bucket Policy' section click 'Edit' > 'Policy Generator'.
++ Choose 'S3 Bucket Policy' from the 'Select Type of Policy' dropdown.
++ In 'Step 2: Add Statements', add the following settings:
+  + Effect: **Allow**
+  + Principal: **" * "** (no quotation marks)
+  + Actions: **GetObject**
+  + ARN: **Bucket ARN** (get from S3 Bucket page)
++ Click 'Add Statement'.
++ Click 'Generate Policy'.
++ Copy the policy from the popup that appears
++ Paste the generated policy into the Permissions > Bucket Policy area.
++ Add '/*' at the end of the 'Resource' key, and save.
++ Go to the 'Access Control List' section, and select 'List' next to 'Everyone'.
+
+### AWS IAM (Identity and Access Management)
++ From the 'Services' tab on the AWS Management Console, search IAM and select it.
++ Go to 'User Groups' > 'Create New Group' > choose a name(associated with the S3 Bucket name) and click 'Create'.
++ Go to 'Policies' > 'Create New Policy' > 'JSON' > 'Import Managed Policy' > search 'S3' > select 'AmazonS3FullAccess' > Click 'Import'.
++ Get the bucket ARN from 'S3 Permissions'
++ Delete the '*' from the 'Resource' key and add the following code into the area:
+```
+"Resource": [
+    "{PASTED ARN}",
+    "{PASTED ARN}/*"
+]
+```
++ Click 'Next' > 'Review' > provide a name and description(associated with the S3 Bucket name), and click 'Create Policy'.
++ Go to 'User Groups'> Open the created group > 'Permissions' > 'Add Permissions' > 'Attach Policies' > search for the policy you created and click 'Add Permissions'.
++ Go to 'Users' > 'Add Users' > create a name and select 'Programmatic access' for the 'Access Type' option.
++ Click 'Next' and select the group you created.
++ Keep clicking 'Next' until you reach the 'Create user' button and click that. 
++ Download the CSV file which contains the AWS_SECRET_ACCESS_KEY and your AWS_ACCESS_KEY_ID needed in the Heroku variables.
++ **IF YOU DO NOT DOWNLOAD THIS NOW YOU WILL NOT GET ANOTHER OPPORTUNITY**
+
+## Set up Emails
+
+**For the email, I used GMail. Other email providers can be used but the process may differ**
+
++ Go to settings.py and change the DEFAULT_FROM_EMAIL to your chosen email address.
++ If you want to set up a new Gmail account for the site, this is the time to do so.
++ Go to the Gmail account and open the 'Settings' tab.
++ Go to 'Accounts and Imports' > 'Other Google Account Settings'.
++ Go to the 'Security' tab and open 'Signing in to Google'.
+
++ Click on '2-step Verification', click 'Get Started' and turn on 2-step verification following their instructions.
++ Go to 'Security' > 'Signing in to Google' > 'App Passwords'.
++ (You may have to input your account password again) Set 'App' to 'Mail', 'Device' to Other, and name it 'Django'.
++ The passcode that appears will be used in your Heroku variables.
+
+## Deploy
++ In Heroku, once all the variables are in place, locate 'Manual Deploy' > choose the master branch and click 'Deploy Branch'.
++ Once the app is built (it might take a bit of time), click 'Open App' from the top of the page.
++ Go back to the 'Deploy' tab and you can now click 'Enable Automatic Deployment'. Changes automatically deploy when you make do git push
+
+## Forking the Repository
++ Log in to GitHub and locate the GitHub Repository.
++ At the top of the Repository above the "Settings" Button on the menu, locate the "Fork" Button.
++ You will have a copy of the original repository in your GitHub account.
++ You will now be able to make changes to the new version and keep the original safe. 
+
+## Making a Local Clone
++ Log into GitHub.
++ Locate the repository.
++ Click the 'Code' dropdown above the file list.
++ Copy the URL for the repository.
++ Open Git Bash on your device.
++ Change the current working directory to the location where you want the cloned directory.
++ Type ```git clone``` in the CLI and then paste the URL you copied earlier. This is what it should look like:
+  + ```$ git clone https://github.com/Darlyn-Lurikah/serii_skincare```
++ Press Enter to create your local clone.
+
+To install all packages, in the terminal type ```pip install -r requirements.txt``` which will do it for you, so you don't have to do it one by one and risk an error. 
+
+---
+---
+
+
+
+
+
 # Technologies Used
 ## Languages
 + [HTML5](https://en.wikipedia.org/wiki/HTML5)
