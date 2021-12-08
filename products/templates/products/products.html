@@ -50,7 +50,7 @@
                             <!-- Found products count -->
                             <p class="text-muted mt-3 text-center text-md-left">
                                 {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                    <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                                    <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
                                 {% endif %}
                                 {{ products|length }} Products{% if search_term %} found for <strong>{{ search_term }}</strong>{% endif %}
                             </p>
@@ -71,8 +71,10 @@
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ product.name }}">
                                     </a>
                                     {% endif %}
-                                    <div class="card-body pl-0 pb-1 bg-pink">
+                                    <div class="card-body d-flex justify-content-between pl-0 pb-1 bg-pink">
                                         <p class="blue-text-upper mb-0">{{ product.name }}</p>
+                                        <!-- Add to favourites btn -->
+                                        <a href="" class="btn brand-icon"><i class="fas fa-heart"></i></a>
                                     </div>
                                     <div class="card-footer bg-pink pt-0 pl-0 pb-4 border-0 text-left">
                                         <div class="row">

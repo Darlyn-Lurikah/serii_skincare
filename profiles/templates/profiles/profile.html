@@ -34,8 +34,7 @@
                     {{ form|crispy }}
                     <button class="btn brand-button rounded-0 text-uppercase float-right">Update Information</button>
                 </form>
-            </div>
-
+            </div> 
             <!-- User order history -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
@@ -77,11 +76,24 @@
                     </table>
                 </div>
             </div>
-        </div>
-        {% for favourite in favourites %}
-            <p>{{ favourite.product.name }}</p>
-        {% endfor %}    
+        </div>    
     </div>
+    {% for favourite in favourites %}
+        <div class="row blue-text-lower">
+            <div class="col-6 mb-1">
+                <a href="{% url 'product_detail' favourite.product.id %}">
+                    {% if favourite.product.image %}
+                        <img class="w-100" src="{{ favourite.product.image.url }}" alt="{{ favourite.product.name }}">
+                    {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ favourite.product.name }}">
+                    {% endif %}
+                </a>
+            </div>
+            <div class="col-7">
+                <p class="my-0"><strong>{{ favourite.product.name }}</strong></p>
+            </div>
+        </div>
+    {% endfor %}
     
 {% endblock %}
 
