@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Product_favourite
+from .models import Product, Category
 
 
 # Controls fields displayed in admin panel (tuple)
@@ -22,13 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name'
     )
 
-class ProductFavouriteAdmin(admin.ModelAdmin):
-    list_display = (
-        'product',
-        'user_profile'
-    )
 
 # Registering Product & Category models.
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Product_favourite, ProductFavouriteAdmin)

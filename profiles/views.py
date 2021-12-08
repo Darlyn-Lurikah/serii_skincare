@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
-from products.models import Product_favourite
 
 @login_required
 def profile(request):
@@ -24,17 +23,15 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
-    """ Display user favourites in profile """
-    favourites = list(Product_favourite.objects.filter(user_profile=profile))
+   
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
         'on_profile_page': True,
-        'favourites': favourites,
     }
-    
+
     return render(request, template, context)
 
 
@@ -45,7 +42,7 @@ def order_history(request, order_number):
     # Message to inform its a past order
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
+        f'A confirmation email was sent on the order date.'
     ))
 
     template = 'checkout/checkout_success.html'

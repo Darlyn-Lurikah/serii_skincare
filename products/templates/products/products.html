@@ -14,12 +14,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col text-center mt-3">
-                    <h2 class="logo-font">Products</h2>
+                    <h2 class="logo-font-pink">Products</h2>
 
                     <!--Display names of current categories -->
                     {% for c in current_categories %}
                         <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                            <span class="p-2 mt-2 badge badge-white blue-text-lower border border-dark">{{ c.friendly_name }}</span>
+                            <span class="p-2 mt-2 badge blue-text-lower border">{{ c.friendly_name }}</span>
                         </a>
                     {% endfor %}
                     <hr class="w-50 mb-1">
@@ -71,10 +71,10 @@
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"  alt="{{ product.name }}">
                                     </a>
                                     {% endif %}
-                                    <div class="card-body pl-0 bg-pink">
-                                        <p class="blue-text-upper mb-0">{{ product.name }} <span class=""><a href="{% url 'edit_product' product.id %}"><i class="fas fa-heart"></i></a></span></p>
+                                    <div class="card-body pl-0 pb-1 bg-pink">
+                                        <p class="blue-text-upper mb-0">{{ product.name }}</p>
                                     </div>
-                                    <div class="card-footer bg-pink pt-0 border-0 text-left">
+                                    <div class="card-footer bg-pink pt-0 pl-0 pb-4 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
                                                 <p class="lead mb-0 text-left blue-text-upper">£{{ product.price }}</p>
@@ -82,7 +82,7 @@
                                                 {% if product.category %}
                                                 <p class="small mt-1 mb-0">
                                                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                        <i class="fas fa-tag mr-1">{{ product.category.friendly_name }}</i>
+                                                        <i>{{ product.category.friendly_name }}</i>
                                                     </a>
                                                 </p>
                                                 {% endif %}

@@ -8,12 +8,13 @@ from .models import Product, Category
 from django.db.models.functions import Lower
 from .forms import ProductForm
 
+
 # View for all products page
 def all_products(request):
     """ View shows all products, sorting and search queries too"""
 
     products = Product.objects.all()
-    
+
     """Start with none to avoid errors with empty search bar"""
     query = None
     categories = None
@@ -39,7 +40,6 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-
 
         # Sorting products by category
         if 'category' in request.GET:
@@ -130,6 +130,7 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ To edit/update a product in the shop """
@@ -139,7 +140,7 @@ def edit_product(request, product_id):
         messages.error(request, 'Sorry, you are not authorised to do that')
         return redirect(reverse('home'))
 
-    # Get product and product id 
+    # Get product and product id
     product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
@@ -169,6 +170,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
     """ To delete a product from the shop """
@@ -180,7 +182,7 @@ def delete_product(request, product_id):
 
     # Get product and product id
     product = get_object_or_404(Product, pk=product_id)
-    # Delete product 
+    # Delete product
     product.delete()
     # Show deleted success message
     messages.success(request, f'{product.name} deleted successfully!')

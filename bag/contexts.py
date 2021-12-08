@@ -20,9 +20,9 @@ def bag_contents(request):
         product = get_object_or_404(Product, pk=item_id)
         # total incremented by quantity x price
         total += quantity * product.price
-        # product count incremented by quantity 
+        # product count incremented by quantity
         product_count += quantity
-        # Add dict to bag items 
+        # Add dict to bag items
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
@@ -42,9 +42,9 @@ def bag_contents(request):
         # if threshold met
         delivery = 0
         amount_to_free_delivery = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         'bag_items': bag_items,
         'total': total,

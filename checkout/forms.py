@@ -13,7 +13,7 @@ class OrderForm(forms.ModelForm):
                   'town_or_city', 'postcode', 'country',
                   'county',)
 
-    # Overriding form init method to 
+    # Overriding form init method to
     # customise form
     def __init__(self, *args, **kwargs):
         """
@@ -21,7 +21,7 @@ class OrderForm(forms.ModelForm):
         labels and set autofocus on first field
         """
 
-        # Call default init method. Shows 
+        # Call default init method. Shows
         # form in default state
         super().__init__(*args, **kwargs)
 
@@ -40,7 +40,7 @@ class OrderForm(forms.ModelForm):
         # Makes cursor start in full_name field
         self.fields['full_name'].widget.attrs['autofocus'] = True
 
-        # Iterate through & add * if required form fields 
+        # Iterate through & add * if required form fields
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:
@@ -50,7 +50,7 @@ class OrderForm(forms.ModelForm):
 
                 # Set form fields to dict placeholders (above)
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            # Add css class 
+            # Add css class
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            # Remove field label as We're using placeholders 
+            # Remove field label as We're using placeholders
             self.fields[field].label = False

@@ -1,4 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (render, redirect,
+    reverse, HttpResponse, get_object_or_404
+)
+
 from django.contrib import messages
 
 from products.models import Product
@@ -16,13 +19,13 @@ def view_bag(request):
 def add_to_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
-    """We get from the POST form data the quantity & 
+    """We get from the POST form data the quantity &
     redirect (template 'name' attr) """
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
 
-    """ To keep bag items until browser closed 
-    we find var 'bag_session' in session. If its not 
+    """ To keep bag items until browser closed
+    we find var 'bag_session' in session. If its not
     there, we initialise to empty dict ready for items """
     bag_session = request.session.get('bag_session', {})
 
@@ -30,7 +33,9 @@ def add_to_bag(request, item_id):
     # ie.in bag already increment quantity
     if item_id in list(bag_session.keys()):
         bag_session[item_id] += quantity
-        messages.success(request, f'Updated {product.name} amount to {bag_session[item_id]}in your bag')
+        messages.success(request, f'Updated '
+                        f'{product.name} amount to '
+                        f'{bag_session[item_id]}in your bag')
 
     # Else add id to dict ie. add to bag
     else:
@@ -48,14 +53,16 @@ def adjust_bag(request, item_id):
     """ We get from the POST form data the quantity """
     quantity = int(request.POST.get('quantity'))
 
-    """ To keep bag items until browser closed 
-    we find var 'bag_session' in session. If its not 
+    """ To keep bag items until browser closed
+    we find var 'bag_session' in session. If its not
     there, we initialise to empty dict ready for items """
     bag_session = request.session.get('bag_session', {})
-    
+
     if quantity > 0:
         bag_session[item_id] = quantity
-        messages.success(request, f'Updated {product.name} amount to {bag_session[item_id]}in your bag')
+        messages.success(request, f'Updated '
+                        f'{product.name} amount to '
+                        f'{bag_session[item_id]}in your bag')
 
     else:
         bag_session.pop(item_id)

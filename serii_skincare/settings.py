@@ -80,23 +80,19 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),  # Root template dir in same line as project dir
-            os.path.join(BASE_DIR, 'templates', 'allauth'),  # Allauth templates - kept in templates/allauth
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
-
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth. Dont delete.
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'bag.contexts.bag_contents',  # Makes bag contents available on whole site 
+                'bag.contexts.bag_contents',
             ],
-
-            # Available in all templates
-            # No need to {%load%} on each
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
@@ -120,14 +116,13 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 
-
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'  # Allow auth via username OR email
-ACCOUNT_EMAIL_REQUIRED = True  # User must use email to register
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # User must verify email
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # User must enter email twice to register
-ACCOUNT_USERNAME_MIN_LENGTH = 4  # Username must be 4 chars or more
-LOGIN_URL = '/accounts/login/'  # Specifying login url
-LOGIN_REDIRECT_URL = '/'  # Redirect url after logging in
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'serii_skincare.wsgi.application'
 
@@ -147,7 +142,6 @@ else:
                 'NAME': BASE_DIR / 'db.sqlite3',
             }
         }
-
 
 
 # Password validation
