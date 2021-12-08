@@ -509,4 +509,22 @@ To install all packages, in the terminal type ```pip install -r requirements.txt
 + [Adobe Photoshop](https://autoprefixer.github.io/): To design products
 
 
+# Credits
+## Code
+
+
++ This site was built on the base of the [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1) walkthrough by [Chris Zielinski](https://github.com/ckz8780) via Code Institute.
+
++ The [Django Docs](https://docs.djangoproject.com/en/3.2/) were very helpful throughout this project
+
+
+## Media
+ 
+
+
+## Acknowledgements
+
++ Tutor support, for their consistent help and patience
++ My mentor Antonio Rodriguez for all his help and guideance
++ My sister because she keeps me sane even if she doesn't mean to 
 
