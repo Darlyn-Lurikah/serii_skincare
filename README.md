@@ -319,4 +319,33 @@ Below is an image of how the database models relate to each other:
 
 
 
+# Technologies Used
+## Languages
++ [HTML5](https://en.wikipedia.org/wiki/HTML5)
++ [CSS3](https://en.wikipedia.org/wiki/CSS)
++ [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
++ [Python3](https://www.python.org/)
+
+## Frameworks and Libraries
++ [Django](https://www.djangoproject.com/)
++ [Pip3](https://pip.pypa.io/en/stable/)
++ [jQuery](https://jquery.com/)
++ [FontAwesome](https://fontawesome.com/)
++ [Google Fonts](https://fonts.google.com/)
++ [Bootstrap](https://getbootstrap.com/)
+
+## All Others
++ [Heroku](https://www.heroku.com/): To deploy live site
++ [GitPod](https://www.gitpod.io/): To develop project and organise version control
++ [GitHub](https://github.com/): Used to host repository
++ [Stripe](https://stripe.com/en-ie): For the payments system
++ [AWS](https://aws.amazon.com/): Used for file storage
++ [Figman](https://www.figma.com/): To create wireframes
++ [RandomKeygen](https://randomkeygen.com/): To create a strong password for required  `<SECRET_KEY>`.
++ [Lighthouse](https://developers.google.com/web/tools/lighthouse): For performance review
++ [Am I Responsive](http://ami.responsivedesign.is/): To README intro image
++ [Adobe Illustrator](https://www.clipconverter.cc/2/): To edit product photo size
++ [Adobe Photoshop](https://autoprefixer.github.io/): To design products
+
+
 
