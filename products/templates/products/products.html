@@ -102,19 +102,19 @@
                                                         <div class="modal-dialog modal-dialog-centered">
                                                             <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title">Modal title</h5>
+                                                                <h5 class="modal-title blue-text-upper">Confirmation</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
                                                             {% if product.name %}
-                                                                <div class="modal-body">
+                                                                <div class="modal-body blue-text-lower">
                                                                     <p>Are you sure you want to delete {{ product.name }} ?</p>
                                                                 </div>
                                                             {% endif %}
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                <button type="button" class="btn btn-primary"><a class="text-danger" 
+                                                                <button type="button" class="btn brand-button text-decoration-none rounded-0"><a 
                                                                 href="{% url 'delete_product' product.id %}">Delete</a></button>
                                                             </div>
                                                             </div>

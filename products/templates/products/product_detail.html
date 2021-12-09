@@ -51,25 +51,25 @@
                         {% if request.user.is_superuser %}
                             <small class="ml-3">
                                 <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                <button type="button" data-toggle="modal" data-target="#myModal">Delete</button>
+                                <button class="brand-button-sm" type="button" data-toggle="modal" data-target="#myModal">Delete</button>
                             </small>
-                                <div id="myModal" class="modal" tabindex="-1">
+                                <div id="myModal" class="modal bg-pin rounded-0" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Modal title</h5>
+                                        <h5 class="modal-title blue-text-upper">Delete Confirmation</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     {% if product.name %}
-                                    <div class="modal-body">
+                                    <div class="modal-body blue-text-lower">
                                         <p>Are you sure you want to delete {{ product.name }} ?</p>
                                     </div>
                                     {% endif %}
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary"><a class="text-danger" 
+                                        <button type="button" class="btn brand-button text-decoration-none rounded-0"><a 
                                         href="{% url 'delete_product' product.id %}">Delete</a></button>
                                     </div>
                                     </div>
