@@ -5,10 +5,24 @@ Visit the live site [here](https://serii-skincare.herokuapp.com/)
 
 ![Main site image](docs/readme-header-image.PNG)
 
+
 ---
 ---
 # Contents
-
++ [User Experience](#user-experience)
+  + [User Stories](#user-stories)
+  + [Design](#design)
++ [Features](#features)
++ [Database](#database)
++ [Technologies Used](#technologies-used)
++ [Testing](#testing)
++ [Deployment](#deployment)
++ [Credits](#credits)
+  + [Content](#content)
+  + [Media](#media)
+  + [Acknowledgements](#acknowledgements)
+---
+---
 
 
 # User Experience
@@ -50,7 +64,7 @@ For this site, I wanted something soft and a bit playful but not too busy so it 
 ### Colour Scheme
 The colour scheme is made up of soft pinks, pale blue and a deep ultramarine 
 
-![colour scheme](docs/colour-scheme.PNG)
+![colour scheme](readme_docs/Site-colour-palette.png)
 
 The colours, while not the most neutral, are still soft enought not to overwhelm the user.
 I used the ultramarine for text and buttons to make them stand out. It's a better alternative to black or dark grey as it has high contrast, but still fits the brand image. 
@@ -62,12 +76,6 @@ For the general font throught the site I chose [Mukta Malar](https://fonts.googl
 
 The brand font I chose is [STIX Two Text](https://fonts.google.com/specimen/STIX+Two+Text?query=stix)as it felt grounded but not too serious and would be good for drawing attention to various area of the site against the other simpler Mukta Malar font. 
 
-
-## Wireframes and Initial Design
-
-[Initial design idea here](docs/MS4-design.pdf)
-
-As the project went on, the wireframe design changed do to design limiations and time constraints. 
 
 
 # Features
@@ -278,10 +286,6 @@ Defensive design features are as follows:
 # Database
 
 Relational databases SQLite and Postgres were used. SQLite for development and Postgres for the deployed Heroku project.
-
-Below is an image of how the database models relate to each other:
-
-![Database schema](docs/database-schema.png)
 
 
 ### Categories
