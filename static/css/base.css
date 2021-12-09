@@ -42,6 +42,27 @@ hr {
 
 }
 
+
+.home-info-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+.home-info-banner {
+    padding: 3rem 0 3rem 0;
+    background-color: #d20f45;
+    color: #f3d6d3;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.home-info-text {
+    color: #d20f45;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 /*----------------------------------------LOGO & FONTS STYLING---*/
 .logo-font-pink {
     font-family: 'STIX Two Text', serif;
@@ -123,10 +144,6 @@ hr {
     border: none!important;
 }
 
-.product-img {
-    height: 211px;
-    width: 211px;
-}
 
 /*****BUTTON STYLING*****/
 
@@ -358,6 +375,10 @@ input[name='q']::placeholder {
     .btn.brand-button {
         padding: .375rem .375rem;
         font-size: .75rem;
+    }
+
+    .home-info-container {
+        padding-top: 3rem;
     }
 
 }

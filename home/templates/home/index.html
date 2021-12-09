@@ -11,42 +11,40 @@
 
 {% block content %}
     
-    <div class="container hero-container">
+    <div class="container-fluid hero-container">
         <div class="row h-100 navbar-gap">
             <div class="col my-auto">
-                <h1 class="display-4 text-md-right brand-title-font text-black">
-                    Shop our new fragrances!</h1>
+                <h1 class="display-4 text-md-right brand-title-font">
+                    We dont just do skincare!</h1>
                 <div class="mt-5 pr-5 text-md-right">
                     <h4>
-                        <a href="{% url 'products' %}" class="brand-button-lg btn btn-lg rounded-0 text-uppercase py-3">Shop now</a>
+                        <a href="{% url 'products' %}" class="brand-button-lg btn btn-lg 
+                        rounded-0 text-uppercase py-3">SHOP ALL</a>
                     </h4>
                 </div>
             </div>
         </div>
     </div>
-    <div class="">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h4> Welcome to Serii!</h4>
-                    <p>
-                        Here at Serii skincare we take the time to formulate
-                        the highest quality products for the babes that
-                        believe glowing, healthy skin shouldn't break the bank! 
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-6-md justify-content-center">
-                    <a href="{% url 'products' %}">
-                        <img src="{{ MEDIA_URL }}Copenhagen_perfume_home.png" alt="Copenhagen perfume" class="img-fluid">
-                    </a>
-                    <h5>Let our new city collection take you place</h5>
-                </div>
+    <div class="row home-info-banner">
+        <div class="col-12 my-0 text-uppercase text-center">
+            <p>Clean, cute and cruelty free</p>
+        </div>  
+    </div>
+    <div class="container-fluid home-info-container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="logo-font-pink pb-4">Welcome to Serii!</h2>
+                    <div class="mx-auto">
+                        <p class="px-5 home-info-text">
+                            Here at Serii skincare we take the time to formulate
+                            the highest quality products for the babes that
+                            believe glowing, healthy skin shouldn't break the bank! 
+                        </p>
+                    </div>
             </div>
         </div>
     </div>
-    
+        
 
 
 {% endblock %}
