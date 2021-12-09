@@ -29,7 +29,7 @@ body {
 }
 
 hr {
-    border: #91a4cc 1px das;
+    border: #91a4cc 1px dashed;
 }
 
 
@@ -166,7 +166,7 @@ hr {
 .brand-button-sm {
     background: #f3d6d3;
     color: #0322AD;
-    max-width: 100 px;
+    max-width: 100px;
     border: none;
     font-weight: 700;
 }

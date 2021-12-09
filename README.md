@@ -472,8 +472,10 @@ For Heroku to know which packages and technologies are being used in a project w
 
 To install all packages, in the terminal type ```pip install -r requirements.txt``` which will do it for you, so you don't have to do it one by one and risk an error. 
 
----
----
+
+
+# Testing
+As the testing section would have made this document too long, you can find it [here](https://github.com/Darlyn-Lurikah/serii_skincare/blob/main/TESTING.md).
 
 
 
