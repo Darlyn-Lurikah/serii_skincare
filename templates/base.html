@@ -83,20 +83,20 @@
                   </a>
 
                   <!--Dropdown account link-->
-                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  <div class="dropdown-menu border-0 bg-pink" aria-labelledby="user-options">
                       {% if request.user.is_authenticated %}
 
                           <!--Display to superuser-->
                           {% if request.user.is_superuser %}
-                              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                              <a href="{% url 'add_product' %}" class="blue-text-lower dropdown-item ">Product Management</a>
                           {% endif %}
                           <!--Display to logged in/authenitcated user-->
-                          <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                          <a href="{% url 'profile' %}" class="blue-text-lower dropdown-item">My Profile</a>
+                          <a href="{% url 'account_logout' %}" class="blue-text-lower dropdown-item">Logout</a>
                       {% else %}
                           <!--Display to unregistered/unauthenticated user-->
-                          <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                          <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                          <a href="{% url 'account_signup' %}" class="blue-text-lower dropdown-item">Register</a>
+                          <a href="{% url 'account_login' %}" class="blue-text-lower dropdown-item">Login</a>
                       {% endif %}
                   </div>
               </li>

@@ -163,6 +163,14 @@ hr {
     border: 2px solid #0322AD;   
 }
 
+.brand-button-sm {
+    background: #f3d6d3;
+    color: #0322AD;
+    max-width: 100 px;
+    border: none;
+    font-weight: 700;
+}
+
 
 .brand-button-lg {
     background: #f3d6d3;
@@ -202,7 +210,7 @@ hr {
 }
 
 a.category-badge > span.badge:hover {
-    background: #d4587d;
+    background: #d20f45;
     color: #f3d6d3;
 }
 
