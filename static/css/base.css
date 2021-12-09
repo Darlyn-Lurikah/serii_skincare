@@ -3,8 +3,6 @@ html {
 }
 
 body {
-    background: url('/media/home_callout.jpg') no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 165px);
     background-color: #f3d6d3;
     font-family: 'Mukta Malar', sans-serif;
@@ -35,20 +33,29 @@ hr {
 }
 
 
+
+.hero-container {
+    background: url('/media/home_callout.jpg') no-repeat center center;
+    background-size: cover;
+    height: calc(80vh - 165px);
+    background-color: #f3d6d3;
+
+}
+
 /*----------------------------------------LOGO & FONTS STYLING---*/
 .logo-font-pink {
     font-family: 'STIX Two Text', serif;
     font-weight: 700;
-    color:  #d4587d;
+    color:  #d20f45;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
 
 /*Adds stroke to the logo to make it bolder*/
-@supports (-webkit-text-stroke: 1px  #d4587d) {
+@supports (-webkit-text-stroke: 1px  #d20f45) {
     .logo-font-pink {
-      -webkit-text-stroke: 2px  #d4587d;
-      -webkit-text-fill-color:  #d4587d;
+      -webkit-text-stroke: 2px  #d20f45;
+      -webkit-text-fill-color:  #d20f45;
     }
   }
 
