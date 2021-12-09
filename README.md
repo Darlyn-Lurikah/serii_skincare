@@ -28,7 +28,6 @@ Visit the live site [here](https://serii-skincare.herokuapp.com/)
 ### As a registered user, I want to:
 
 + Log into the site with own account
-+ Save products to my favourites and view in my profile
 + See a record of past purchases
 + Be able to navigate to each past purchase product page
 + Be able to save my delivery information

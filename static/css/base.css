@@ -116,6 +116,10 @@ hr {
     border: none!important;
 }
 
+.product-img {
+    height: 211px;
+    width: 211px;
+}
 
 /*****BUTTON STYLING*****/
 
